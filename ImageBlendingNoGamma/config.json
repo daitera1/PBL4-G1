@@ -1,0 +1,10 @@
+{
+    "p_width": 1920,
+    "p_height": 1080,
+    "p_distance": 0.0,
+    "p_overlap": 1280,
+    "p_length": 0.0,
+    "gamma": 1.0,
+    "image_name": "test_picture.jpg",
+    "side": "left"
+}

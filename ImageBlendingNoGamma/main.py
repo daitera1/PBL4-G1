@@ -12,28 +12,24 @@ from calculate_overlap import CalculateOverlap
 class MainAlphaBlender:
     """Orchestrates the full image-blending pipeline (no gamma compensation).
 
+    All tuneable parameters live in ``config.json`` and are read by
+    ConfigReader.  The code here is hardcoded logic that operates on
+    those flexible values.
+
     Attributes (from UML):
         __configReader (ConfigReader) – configuration provider
     """
 
     def __init__(self):
-        # Read the side from the command-line argument
-        side = sys.argv[1].lower() if len(sys.argv) > 1 else ""
-        if side not in ("left", "right"):
+        # Read the side from the command-line argument (overrides JSON default)
+        side = sys.argv[1].lower() if len(sys.argv) > 1 else None
+        if side is not None and side not in ("left", "right"):
             print("Usage: python main.py [left|right]")
             sys.exit(1)
 
         # --- UML private attribute ---
-        self.__configReader = ConfigReader(
-            image_name="test_picture.jpg",
-            side=side,
-            p_width=1920,
-            p_height=1080,
-            p_distance=0.0,
-            p_overlap=1280,
-            p_length=0.0,
-            gamma=1.0,  # No gamma compensation (linear blending)
-        )
+        # ConfigReader reads everything from config.json
+        self.__configReader = ConfigReader(side_override=side)
 
     # --- UML public methods ---
 

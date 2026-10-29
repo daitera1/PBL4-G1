@@ -1,10 +1,15 @@
+import json
 import os
 import sys
 
 
 class ConfigReader:
-    """Reads and provides configuration parameters for image blending
-    (no gamma compensation – linear blending).
+    """Reads configuration parameters from a JSON file and provides
+    getter methods for the rest of the pipeline.
+
+    The JSON file (``config.json``) is the single flexible source for
+    all tuneable settings.  The Python code stays hardcoded — only the
+    JSON values change between runs.
 
     Attributes (from UML):
         p_width    (int)   – projector / projection width in pixels
@@ -15,20 +20,36 @@ class ConfigReader:
         gamma      (float) – gamma value (1.0 = linear, no compensation)
     """
 
-    def __init__(self, image_name="test_picture.jpg", side="left",
-                 p_width=1920, p_height=1080, p_distance=0.0,
-                 p_overlap=1280, p_length=0.0, gamma=1.0):
-        # --- UML private attributes ---
-        self.p_width = p_width          # int
-        self.p_height = p_height        # int
-        self.p_distance = p_distance    # float
-        self.p_overlap = p_overlap      # int
-        self.p_length = p_length        # float
-        self.gamma = gamma              # float  (1.0 = linear)
+    def __init__(self, config_path=None, side_override=None):
+        # Resolve config.json relative to this file's directory
+        if config_path is None:
+            config_path = os.path.join(
+                os.path.dirname(os.path.abspath(__file__)), "config.json"
+            )
 
-        # Internal state used by getter methods
-        self._image_name = image_name
-        self._side = side
+        # Read JSON file
+        try:
+            with open(config_path, "r") as f:
+                data = json.load(f)
+        except FileNotFoundError:
+            print(f"Error: Configuration file '{config_path}' not found!")
+            sys.exit(1)
+        except json.JSONDecodeError as e:
+            print(f"Error: Invalid JSON in '{config_path}': {e}")
+            sys.exit(1)
+
+        # --- UML private attributes (loaded from JSON) ---
+        self.p_width = int(data.get("p_width", 1920))
+        self.p_height = int(data.get("p_height", 1080))
+        self.p_distance = float(data.get("p_distance", 0.0))
+        self.p_overlap = int(data.get("p_overlap", 1280))
+        self.p_length = float(data.get("p_length", 0.0))
+        self.gamma = float(data.get("gamma", 1.0))
+
+        # Additional settings from JSON
+        self._image_name = str(data.get("image_name", "test_picture.jpg"))
+        # Command-line side override takes priority over JSON value
+        self._side = side_override if side_override else str(data.get("side", "left"))
 
     # --- UML public methods ---
 
@@ -57,7 +78,7 @@ class ConfigReader:
         return self._side
 
     def getGamma(self):
-        """Returns the gamma value (float). Always 1.0 for linear blending."""
+        """Returns the gamma value (float). 1.0 = linear (no compensation)."""
         return self.gamma
 
     def getProjectionLength(self):
