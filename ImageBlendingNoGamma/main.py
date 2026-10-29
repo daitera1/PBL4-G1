@@ -1,127 +1,94 @@
+import os
 import sys
 
 import cv2
-import numpy as np
 
-import config
+from config_reader import ConfigReader
+from image_read_write import ImageReadWrite
+from crop_image import CropImage
+from mask_creator import MaskCreator
+from calculate_overlap import CalculateOverlap
 
 
-class ImageBlender:
-    def __init__(self, image_path=config.IMAGE_PATH,
-                 projector_width=config.PROJECTOR_WIDTH,
-                 projector_height=config.PROJECTOR_HEIGHT,
-                 target_overlap_width=config.TARGET_OVERLAP_WIDTH):
-        self.image_path = image_path
-        self.projector_width = projector_width
-        self.projector_height = projector_height
-        self.target_overlap_width = target_overlap_width
+class MainAlphaBlender:
+    """Orchestrates the full image-blending pipeline (no gamma compensation).
 
-    def load_image(self):
-        input_image = cv2.imread(self.image_path)
-        if input_image is None:
-            print(f"Error: Could not load image '{self.image_path}'!")
+    Attributes (from UML):
+        __configReader (ConfigReader) – configuration provider
+    """
+
+    def __init__(self):
+        # Read the side from the command-line argument
+        side = sys.argv[1].lower() if len(sys.argv) > 1 else ""
+        if side not in ("left", "right"):
+            print("Usage: python main.py [left|right]")
             sys.exit(1)
-        return input_image
 
-    def get_overlap_width(self, img_width):
-        overlap_width = self.target_overlap_width
+        # --- UML private attribute ---
+        self.__configReader = ConfigReader(
+            image_name="test_picture.jpg",
+            side=side,
+            p_width=1920,
+            p_height=1080,
+            p_distance=0.0,
+            p_overlap=1280,
+            p_length=0.0,
+            gamma=1.0,  # No gamma compensation (linear blending)
+        )
 
-        # Safety check if the image is too small for the target overlap
-        if img_width <= overlap_width:
-            overlap_width = img_width // 3
-            print(f"Note: Image width ({img_width}px) is smaller than {self.target_overlap_width}px. "
-                  f"Adjusting overlap to {overlap_width}px.")
-        return overlap_width
+    # --- UML public methods ---
 
-    def show(self, window_name, frame):
+    def display(self):
+        """Runs the full blending pipeline and displays the result (void)."""
+        config = self.__configReader
+        side = config.getSide()
+
+        # 1. Read the image
+        image_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), config.getImageName()
+        )
+        reader = ImageReadWrite(image_path)
+        image = reader.getImage()
+        img_height, img_width = image.shape[:2]
+
+        # 2. Calculate effective overlap (with safety check)
+        overlap = config.p_overlap
+        if img_width <= overlap:
+            overlap = img_width // 3
+            print(
+                f"Note: Image width ({img_width}px) is smaller than "
+                f"{config.p_overlap}px. Adjusting overlap to {overlap}px."
+            )
+
+        # 3. Crop the image into left / right halves
+        cropper = CropImage(image, overlap)
+        cropper.crop()
+        cropped = cropper.img_left if side == "left" else cropper.img_right
+
+        # 4. Create the linear gradient mask
+        mask_creator = MaskCreator(config.getGamma(), overlap)
+        mask = mask_creator.createMask(side, img_height, cropped.shape[1])
+
+        # 5. Apply alpha blending and position on canvas
+        calc = CalculateOverlap(
+            side, overlap, cropped, mask,
+            config.getProjectionWidth(), config.getProjectionHeight(),
+        )
+        result = calc.alphaGamma()
+
+        # 6. Display full-screen
+        window_name = f"{'Left' if side == 'left' else 'Right'} Projector"
         cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
-        cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-        cv2.imshow(window_name, frame)
+        cv2.setWindowProperty(
+            window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN
+        )
+        cv2.imshow(window_name, result)
 
         print(f"{window_name} feed running. Press any key to exit.")
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 
-    # --- LEFT PROJECTOR ---
-    def blend_left(self, input_image):
-        img_height, img_width = input_image.shape[:2]
-        overlap_width = self.get_overlap_width(img_width)
-
-        half_width = img_width // 2
-        overlap_end = half_width + (overlap_width // 2)
-        left_feed = input_image[:, :overlap_end].copy()
-
-        # Create linear alpha gradient mask for edge blending
-        left_mask = np.ones((img_height, left_feed.shape[1]), dtype=np.float32)
-        for i in range(overlap_width):
-            alpha = 1.0 - (i / overlap_width)
-            col_idx = left_feed.shape[1] - overlap_width + i
-            if 0 <= col_idx < left_feed.shape[1]:
-                left_mask[:, col_idx] = alpha
-
-        left_mask_3ch = cv2.merge([left_mask, left_mask, left_mask])
-        blended_left = (left_feed.astype(np.float32) * left_mask_3ch).astype(np.uint8)
-
-        # Right-align for the Left Projector
-        target_w, target_h = self.projector_width, self.projector_height
-        h, w = blended_left.shape[:2]
-        canvas = np.zeros((target_h, target_w, 3), dtype=np.uint8)
-        new_w = int(w * (target_h / h))
-        resized = cv2.resize(blended_left, (new_w, target_h))
-
-        if new_w <= target_w:
-            canvas[:, target_w - new_w:] = resized
-        else:
-            canvas = cv2.resize(blended_left, (target_w, target_h))
-        return canvas
-
-    def left(self):
-        self.show(config.LEFT_WINDOW_NAME, self.blend_left(self.load_image()))
-
-    # --- RIGHT PROJECTOR ---
-    def blend_right(self, input_image):
-        img_height, img_width = input_image.shape[:2]
-        overlap_width = self.get_overlap_width(img_width)
-
-        half_width = img_width // 2
-        overlap_start = half_width - (overlap_width // 2)
-        right_feed = input_image[:, overlap_start:].copy()
-
-        # Create linear alpha gradient mask for edge blending
-        right_mask = np.ones((img_height, right_feed.shape[1]), dtype=np.float32)
-        for i in range(overlap_width):
-            alpha = i / overlap_width
-            if i < right_feed.shape[1]:
-                right_mask[:, i] = alpha
-
-        right_mask_3ch = cv2.merge([right_mask, right_mask, right_mask])
-        blended_right = (right_feed.astype(np.float32) * right_mask_3ch).astype(np.uint8)
-
-        # Left-align for the Right Projector
-        target_w, target_h = self.projector_width, self.projector_height
-        h, w = blended_right.shape[:2]
-        canvas = np.zeros((target_h, target_w, 3), dtype=np.uint8)
-        new_w = int(w * (target_h / h))
-        resized = cv2.resize(blended_right, (new_w, target_h))
-
-        if new_w <= target_w:
-            canvas[:, :new_w] = resized
-        else:
-            canvas = cv2.resize(blended_right, (target_w, target_h))
-        return canvas
-
-    def right(self):
-        self.show(config.RIGHT_WINDOW_NAME, self.blend_right(self.load_image()))
-
 
 if __name__ == "__main__":
-    # Usage: python main.py left   or   python main.py right
-    side = sys.argv[1].lower() if len(sys.argv) > 1 else ""
-    blender = ImageBlender()
-    if side == "left":
-        blender.left()
-    elif side == "right":
-        blender.right()
-    else:
-        print("Usage: python main.py [left|right]")
-        sys.exit(1)
+    blender = MainAlphaBlender()
+    blender.display()
