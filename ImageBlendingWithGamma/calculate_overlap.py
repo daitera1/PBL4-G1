@@ -6,22 +6,23 @@ class CalculateOverlap:
     """Applies the alpha-gamma mask to a cropped image and positions it on
     a projector-sized canvas.
 
+    Depends on ConfigReader for side, overlap, and projector dimensions.
+
     Attributes (from UML):
         side         (String) – ``'left'`` or ``'right'``
         overlapWidth (int)    – effective overlap width in pixels
     """
 
-    def __init__(self, side, overlapWidth, cropped_image, mask,
-                 projector_width, projector_height):
-        # --- UML private attributes ---
-        self.side = side                  # String
-        self.overlapWidth = overlapWidth  # int
+    def __init__(self, config_reader, cropped_image, mask):
+        # --- UML private attributes (sourced from ConfigReader) ---
+        self.side = config_reader.getSide()                    # String
+        self.overlapWidth = config_reader.p_overlap            # int
 
         # Internal state needed by alphaGamma()
         self._cropped_image = cropped_image
         self._mask = mask
-        self._projector_width = projector_width
-        self._projector_height = projector_height
+        self._projector_width = config_reader.getProjectionWidth()
+        self._projector_height = config_reader.getProjectionHeight()
 
     # --- UML public methods ---
 

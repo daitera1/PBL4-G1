@@ -5,15 +5,17 @@ import numpy as np
 class MaskCreator:
     """Creates a gamma-compensated gradient mask for edge blending.
 
+    Depends on ConfigReader for gamma and overlap values.
+
     Attributes (from UML):
         gamma     (float) – gamma compensation exponent
         overlapPx (int)   – width of the overlap region in pixels
     """
 
-    def __init__(self, gamma, overlapPx):
-        # --- UML private attributes ---
-        self.gamma = gamma          # float
-        self.overlapPx = overlapPx  # int
+    def __init__(self, config_reader):
+        # --- UML private attributes (sourced from ConfigReader) ---
+        self.gamma = config_reader.getGamma()        # float
+        self.overlapPx = config_reader.p_overlap      # int
 
     # --- UML public methods ---
 

@@ -1,3 +1,4 @@
+import os
 import sys
 
 import cv2
@@ -6,15 +7,20 @@ import cv2
 class ImageReadWrite:
     """Reads an image from disk and stores it.
 
+    Depends on ConfigReader for the image filename.
+
     Attributes (from UML):
         img_filename (String) – path to the image file
         image        (Mat)    – the loaded image matrix
     """
 
-    def __init__(self, img_filename):
+    def __init__(self, config_reader):
         # --- UML private attributes ---
-        self.img_filename = img_filename  # String
-        self.image = None                 # Mat
+        self.img_filename = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)),
+            config_reader.getImageName(),
+        )  # String
+        self.image = None  # Mat
 
         # Load image on construction
         self.image = cv2.imread(self.img_filename)

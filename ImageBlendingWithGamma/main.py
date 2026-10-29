@@ -1,4 +1,3 @@
-import os
 import sys
 
 import cv2
@@ -43,37 +42,31 @@ class MainAlphaBlender:
         config = self.__configReader
         side = config.getSide()
 
-        # 1. Read the image
-        image_path = os.path.join(
-            os.path.dirname(os.path.abspath(__file__)), config.getImageName()
-        )
-        reader = ImageReadWrite(image_path)
+        # 1. Read the image (depends on ConfigReader)
+        reader = ImageReadWrite(config)
         image = reader.getImage()
         img_height, img_width = image.shape[:2]
 
-        # 2. Calculate effective overlap (with safety check)
-        overlap = config.p_overlap
-        if img_width <= overlap:
-            overlap = img_width // 3
+        # 2. Safety-check overlap and update ConfigReader
+        if img_width <= config.p_overlap:
+            original = config.p_overlap
+            config.p_overlap = img_width // 3
             print(
                 f"Note: Image width ({img_width}px) is smaller than "
-                f"{config.p_overlap}px. Adjusting overlap to {overlap}px."
+                f"{original}px. Adjusting overlap to {config.p_overlap}px."
             )
 
-        # 3. Crop the image into left / right halves
-        cropper = CropImage(image, overlap)
+        # 3. Crop the image (depends on ConfigReader)
+        cropper = CropImage(config, image)
         cropper.crop()
         cropped = cropper.img_left if side == "left" else cropper.img_right
 
-        # 4. Create the gamma-compensated gradient mask
-        mask_creator = MaskCreator(config.getGamma(), overlap)
+        # 4. Create the gamma-compensated gradient mask (depends on ConfigReader)
+        mask_creator = MaskCreator(config)
         mask = mask_creator.createMask(side, img_height, cropped.shape[1])
 
-        # 5. Apply alpha-gamma blending and position on canvas
-        calc = CalculateOverlap(
-            side, overlap, cropped, mask,
-            config.getProjectionWidth(), config.getProjectionHeight(),
-        )
+        # 5. Apply alpha-gamma blending (depends on ConfigReader)
+        calc = CalculateOverlap(config, cropped, mask)
         result = calc.alphaGamma()
 
         # 6. Display full-screen

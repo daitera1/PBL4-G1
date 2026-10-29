@@ -1,19 +1,21 @@
 class CropImage:
     """Crops a full image into left and right halves with an overlap region.
 
+    Depends on ConfigReader for the overlap width.
+
     Attributes (from UML):
         img_left  (Mat) – the left cropped portion of the image
         img_right (Mat) – the right cropped portion of the image
     """
 
-    def __init__(self, image, overlap_width):
+    def __init__(self, config_reader, image):
         # --- UML private attributes ---
         self.img_left = None   # Mat
         self.img_right = None  # Mat
 
-        # Internal references needed by crop()
+        # Dependencies from ConfigReader
         self._image = image
-        self._overlap_width = overlap_width
+        self._overlap_width = config_reader.p_overlap
 
     # --- UML public methods ---
 
