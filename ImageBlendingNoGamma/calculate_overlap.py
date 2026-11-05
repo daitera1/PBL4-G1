@@ -146,24 +146,9 @@ class CalculateOverlap:
 
         target_w = self._projector_width
         target_h = self._projector_height
-        h, w = blended.shape[:2]
 
-        canvas = np.zeros((target_h, target_w, 3), dtype=np.uint8)
-        new_w = int(w * (target_h / h))
-        resized = cv2.resize(blended, (new_w, target_h))
-
-        if self._side == "left":
-            # Right-align for the left projector
-            if new_w <= target_w:
-                canvas[:, target_w - new_w:] = resized
-            else:
-                canvas = cv2.resize(blended, (target_w, target_h))
-        else:
-            # Left-align for the right projector
-            if new_w <= target_w:
-                canvas[:, :new_w] = resized
-            else:
-                canvas = cv2.resize(blended, (target_w, target_h))
+        # Stretch to fill the full projector canvas so both sides align
+        canvas = cv2.resize(blended, (target_w, target_h))
 
         self._blended_result = canvas
         return self._blended_result
