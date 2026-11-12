@@ -6,6 +6,6 @@ These `.html` files are formatted copies for the downloaded ZIP. To use them, ex
 
 | Readable page | Open |
 | --- | --- |
-| Workload record | [Read on GitHub](../../../Management/workload/README.md) |
+| Tarun — workload and coordination records | [Read on GitHub](../../../Management/workload/README.md) |
 
 [Back to the professor guide](../../../PROFESSOR_START_HERE.md)
