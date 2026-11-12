@@ -1,0 +1,278 @@
+\doxysection{config\+\_\+reader.\+Config\+Reader Class Reference}
+\hypertarget{classconfig__reader_1_1_config_reader}{}\label{classconfig__reader_1_1_config_reader}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+
+
+Reads and stores projector and image configuration values.  
+
+
+Inheritance diagram for config\+\_\+reader.\+Config\+Reader:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classconfig__reader_1_1_config_reader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a73be962b79de11a5a90081f2d1664133}{\+\_\+\+\_\+init\+\_\+\_}} (self)
+\begin{DoxyCompactList}\small\item\em Initialises \doxylink{classconfig__reader_1_1_config_reader}{Config\+Reader} with default None values. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_ad731ac82f98be40fffd30ae975ac2fbc}{get\+Projected\+Image\+Width}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the projected image width. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_aa5bd4ca6766234b6db61b1ea3c70b59c}{get\+Distance\+Between\+Projector}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the distance between the two projectors. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_af09a64fbb42918c72d3fa184a04d2f14}{get\+Image\+Width}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the image width. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a658a811dee70b56a76c97d7bc9a07487}{get\+Image\+Height}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the image height. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a7bc7184db683c24a00706ae9b4dad09f}{get\+Image\+Name}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the image filename. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_ab8d1c2bce571a887e3e4fbc7fbfa178c}{get\+Side}} (self)
+\begin{DoxyCompactList}\small\item\em Returns which side this projector handles. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a64b94161650c3c54ca7b8a277b9cd5d6}{get\+Gamma}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the gamma value for blending. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a80c1ca3ac4eeb62249de89c8b93832fc}{get\+Projection\+Length}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the projection length (throw distance). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a6d5819650c38bccb9d4a1ab916285698}{get\+Projection\+Width}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the projection width. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a2460a8d0c562553a5fef5ae853299906}{get\+Projection\+Height}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the projector height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a516e3f8bd0cdec5778ceb88f1607986c}{p\+\_\+width}} = None
+\begin{DoxyCompactList}\small\item\em Width of the projected image in pixels. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_aeb3bfe2857deb7f4eb2313f20e5a4a68}{p\+\_\+height}} = None
+\begin{DoxyCompactList}\small\item\em Height of the projector in physical units. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_aeb70be7393cd109e478f3bfc210bbae5}{p\+\_\+distance}} = None
+\begin{DoxyCompactList}\small\item\em Distance between the two projectors in cm. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a61cd9a68157d0ee5cd8372375e85715a}{p\+\_\+overlap}} = None
+\begin{DoxyCompactList}\small\item\em Overlap width between the two projected images in pixels. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a4e1940e10df7b7d3204fcc51e9b894b5}{p\+\_\+length}} = None
+\begin{DoxyCompactList}\small\item\em Projection length (throw distance) in cm. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classconfig__reader_1_1_config_reader_a2a206c6447eef47d2db8f52c93aaaf0f}{gamma}} = None
+\begin{DoxyCompactList}\small\item\em Gamma value used for alpha blending curve. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads and stores projector and image configuration values. 
+
+Provides getter methods for all parameters needed by the stitching pipeline such as projector dimensions, overlap, gamma value, and image metadata. 
+
+\label{classconfig__reader_1_1_config_reader_doc-constructors}
+\Hypertarget{classconfig__reader_1_1_config_reader_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classconfig__reader_1_1_config_reader_a73be962b79de11a5a90081f2d1664133}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a73be962b79de11a5a90081f2d1664133} 
+config\+\_\+reader.\+Config\+Reader.\+\_\+\+\_\+init\+\_\+\_ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Initialises \doxylink{classconfig__reader_1_1_config_reader}{Config\+Reader} with default None values. 
+
+
+
+\label{classconfig__reader_1_1_config_reader_doc-func-members}
+\Hypertarget{classconfig__reader_1_1_config_reader_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classconfig__reader_1_1_config_reader_aa5bd4ca6766234b6db61b1ea3c70b59c}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getDistanceBetweenProjector@{getDistanceBetweenProjector}}
+\index{getDistanceBetweenProjector@{getDistanceBetweenProjector}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getDistanceBetweenProjector()}{getDistanceBetweenProjector()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_aa5bd4ca6766234b6db61b1ea3c70b59c} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Distance\+Between\+Projector (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns the distance between the two projectors. 
+
+\begin{DoxyReturn}{Returns}
+float Distance in cm. 
+\end{DoxyReturn}
+\Hypertarget{classconfig__reader_1_1_config_reader_a64b94161650c3c54ca7b8a277b9cd5d6}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getGamma@{getGamma}}
+\index{getGamma@{getGamma}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getGamma()}{getGamma()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a64b94161650c3c54ca7b8a277b9cd5d6} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Gamma (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns the gamma value for blending. 
+
+\begin{DoxyReturn}{Returns}
+float Gamma value. 
+\end{DoxyReturn}
+\Hypertarget{classconfig__reader_1_1_config_reader_a658a811dee70b56a76c97d7bc9a07487}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getImageHeight@{getImageHeight}}
+\index{getImageHeight@{getImageHeight}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getImageHeight()}{getImageHeight()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a658a811dee70b56a76c97d7bc9a07487} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Image\+Height (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns the image height. 
+
+\begin{DoxyReturn}{Returns}
+int Height in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classconfig__reader_1_1_config_reader_a7bc7184db683c24a00706ae9b4dad09f}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getImageName@{getImageName}}
+\index{getImageName@{getImageName}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getImageName()}{getImageName()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a7bc7184db683c24a00706ae9b4dad09f} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Image\+Name (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns the image filename. 
+
+\begin{DoxyReturn}{Returns}
+str Filename of the source image. 
+\end{DoxyReturn}
+\Hypertarget{classconfig__reader_1_1_config_reader_af09a64fbb42918c72d3fa184a04d2f14}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getImageWidth@{getImageWidth}}
+\index{getImageWidth@{getImageWidth}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getImageWidth()}{getImageWidth()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_af09a64fbb42918c72d3fa184a04d2f14} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Image\+Width (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns the image width. 
+
+\begin{DoxyReturn}{Returns}
+int Width in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classconfig__reader_1_1_config_reader_ad731ac82f98be40fffd30ae975ac2fbc}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getProjectedImageWidth@{getProjectedImageWidth}}
+\index{getProjectedImageWidth@{getProjectedImageWidth}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getProjectedImageWidth()}{getProjectedImageWidth()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_ad731ac82f98be40fffd30ae975ac2fbc} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Projected\+Image\+Width (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns the projected image width. 
+
+\begin{DoxyReturn}{Returns}
+int Width in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classconfig__reader_1_1_config_reader_a2460a8d0c562553a5fef5ae853299906}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getProjectionHeight@{getProjectionHeight}}
+\index{getProjectionHeight@{getProjectionHeight}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getProjectionHeight()}{getProjectionHeight()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a2460a8d0c562553a5fef5ae853299906} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Projection\+Height (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns the projector height. 
+
+\begin{DoxyReturn}{Returns}
+int Height in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classconfig__reader_1_1_config_reader_a80c1ca3ac4eeb62249de89c8b93832fc}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getProjectionLength@{getProjectionLength}}
+\index{getProjectionLength@{getProjectionLength}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getProjectionLength()}{getProjectionLength()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a80c1ca3ac4eeb62249de89c8b93832fc} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Projection\+Length (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns the projection length (throw distance). 
+
+\begin{DoxyReturn}{Returns}
+float Length in cm. 
+\end{DoxyReturn}
+\Hypertarget{classconfig__reader_1_1_config_reader_a6d5819650c38bccb9d4a1ab916285698}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getProjectionWidth@{getProjectionWidth}}
+\index{getProjectionWidth@{getProjectionWidth}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getProjectionWidth()}{getProjectionWidth()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a6d5819650c38bccb9d4a1ab916285698} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Projection\+Width (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns the projection width. 
+
+\begin{DoxyReturn}{Returns}
+int Width in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classconfig__reader_1_1_config_reader_ab8d1c2bce571a887e3e4fbc7fbfa178c}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!getSide@{getSide}}
+\index{getSide@{getSide}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getSide()}{getSide()}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_ab8d1c2bce571a887e3e4fbc7fbfa178c} 
+config\+\_\+reader.\+Config\+Reader.\+get\+Side (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Returns which side this projector handles. 
+
+\begin{DoxyReturn}{Returns}
+str Either \textquotesingle{}left\textquotesingle{} or \textquotesingle{}right\textquotesingle{}. 
+\end{DoxyReturn}
+
+
+\label{classconfig__reader_1_1_config_reader_doc-variable-members}
+\Hypertarget{classconfig__reader_1_1_config_reader_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classconfig__reader_1_1_config_reader_a2a206c6447eef47d2db8f52c93aaaf0f}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!gamma@{gamma}}
+\index{gamma@{gamma}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{gamma}{gamma}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a2a206c6447eef47d2db8f52c93aaaf0f} 
+config\+\_\+reader.\+Config\+Reader.\+gamma = None}
+
+
+
+Gamma value used for alpha blending curve. 
+
+\Hypertarget{classconfig__reader_1_1_config_reader_aeb70be7393cd109e478f3bfc210bbae5}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!p\_distance@{p\_distance}}
+\index{p\_distance@{p\_distance}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{p\_distance}{p\_distance}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_aeb70be7393cd109e478f3bfc210bbae5} 
+config\+\_\+reader.\+Config\+Reader.\+p\+\_\+distance = None}
+
+
+
+Distance between the two projectors in cm. 
+
+\Hypertarget{classconfig__reader_1_1_config_reader_aeb3bfe2857deb7f4eb2313f20e5a4a68}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!p\_height@{p\_height}}
+\index{p\_height@{p\_height}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{p\_height}{p\_height}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_aeb3bfe2857deb7f4eb2313f20e5a4a68} 
+config\+\_\+reader.\+Config\+Reader.\+p\+\_\+height = None}
+
+
+
+Height of the projector in physical units. 
+
+\Hypertarget{classconfig__reader_1_1_config_reader_a4e1940e10df7b7d3204fcc51e9b894b5}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!p\_length@{p\_length}}
+\index{p\_length@{p\_length}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{p\_length}{p\_length}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a4e1940e10df7b7d3204fcc51e9b894b5} 
+config\+\_\+reader.\+Config\+Reader.\+p\+\_\+length = None}
+
+
+
+Projection length (throw distance) in cm. 
+
+\Hypertarget{classconfig__reader_1_1_config_reader_a61cd9a68157d0ee5cd8372375e85715a}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!p\_overlap@{p\_overlap}}
+\index{p\_overlap@{p\_overlap}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{p\_overlap}{p\_overlap}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a61cd9a68157d0ee5cd8372375e85715a} 
+config\+\_\+reader.\+Config\+Reader.\+p\+\_\+overlap = None}
+
+
+
+Overlap width between the two projected images in pixels. 
+
+\Hypertarget{classconfig__reader_1_1_config_reader_a516e3f8bd0cdec5778ceb88f1607986c}\index{config\_reader.ConfigReader@{config\_reader.ConfigReader}!p\_width@{p\_width}}
+\index{p\_width@{p\_width}!config\_reader.ConfigReader@{config\_reader.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{p\_width}{p\_width}}
+{\footnotesize\ttfamily \label{classconfig__reader_1_1_config_reader_a516e3f8bd0cdec5778ceb88f1607986c} 
+config\+\_\+reader.\+Config\+Reader.\+p\+\_\+width = None}
+
+
+
+Width of the projected image in pixels. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+code/\doxymbox{\hyperlink{config__reader_8py}{config\+\_\+reader.\+py}}\end{DoxyCompactItemize}

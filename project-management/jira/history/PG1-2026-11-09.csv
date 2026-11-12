@@ -1,0 +1,53 @@
+Issue key,Summary,Status,Type,Due date,Updated,Subtask parent
+PG1-4,Daisuke · UML & interfaces,Done,Task,2026-10-23 00:00:00.0,2026-11-04 01:55:04.783,PG1-4
+PG1-5,Marcus · Setup & blending experiment,Done,Task,2026-10-24 00:00:00.0,2026-10-29 07:09:25.685,PG1-5
+PG1-6,Haruho · Prototype & technical review,To Do,Task,2026-10-27 00:00:00.0,2026-10-22 04:57:13.622,PG1-6
+PG1-7,Hanz · Test prototype & report,To Do,Task,2026-10-26 00:00:00.0,2026-10-22 04:57:29.713,PG1-7
+PG1-8,Monika · Main Page & docs review,In Progress,Task,2026-10-28 00:00:00.0,2026-10-22 04:57:44.254,PG1-8
+PG1-9,Pan · Run guide & results section,To Do,Task,2026-10-27 00:00:00.0,2026-10-22 04:58:03.379,PG1-9
+PG1-10,Tarun · Workload & access check,Done,Task,2026-10-23 00:00:00.0,2026-10-29 04:42:18.891,PG1-10
+PG1-11,Sousuke · Overview & comment format,Done,Task,2026-10-24 00:00:00.0,2026-10-29 05:00:04.188,PG1-11
+PG1-12,Bien · Doxywizard sample & config,Done,Task,2026-10-23 00:00:00.0,2026-10-29 05:15:52.705,PG1-12
+PG1-13,Jake · Coordination & final review,Done,Task,2026-10-28 00:00:00.0,2026-10-29 04:41:54.118,PG1-13
+PG1-14,Sariga · Meeting notes & decisions,Done,Task,2026-10-26 00:00:00.0,2026-10-29 04:42:21.88,PG1-14
+PG1-15,Watts · Jira & evidence handover,Done,Task,2026-10-28 00:00:00.0,2026-10-29 04:41:59.129,PG1-15
+PG1-16,Add everyone's email and assign initial tasks,Done,Subtask,,2026-10-15 06:13:16.208,PG1-16
+PG1-17,Assign Jake and Sosuke,Done,Subtask,,2026-10-28 08:58:28.935,PG1-17
+PG1-18,main page,To Do,Subtask,,2026-10-20 13:11:48.689,PG1-18
+PG1-19,Week 3 Development — Haruho,To Do,Epic,2026-10-27 00:00:00.0,2026-10-22 05:00:23.439,PG1-19
+PG1-20,Week 3 Documentation — Monika,Done,Epic,2026-10-28 00:00:00.0,2026-10-29 04:41:56.38,PG1-20
+PG1-21,Week 3 Management — Jake,Done,Epic,2026-10-28 00:00:00.0,2026-10-29 04:41:40.25,PG1-21
+PG1-22,Final presentation · 12 Nov · 5–7 min,To Do,Epic,2026-11-12 00:00:00.0,2026-10-22 05:01:57.142,PG1-22
+PG1-23,Haruho · Development slides & demo,To Do,Task,2026-11-08 00:00:00.0,2026-10-22 05:03:48.656,PG1-23
+PG1-24,Monika · Documentation slides & evidence,To Do,Task,2026-11-08 00:00:00.0,2026-10-22 05:04:16.997,PG1-24
+PG1-25,Jake · Combine deck & management slides,To Do,Task,2026-11-09 00:00:00.0,2026-10-22 05:04:41.499,PG1-25
+PG1-26,Team · Rehearse & polish presentation,To Do,Task,2026-11-11 00:00:00.0,2026-10-22 05:05:09.498,PG1-26
+PG1-27,Week 4 — Team tasks and review,To Do,Epic,2026-11-04 00:00:00.0,2026-10-29 04:45:46.287,PG1-27
+PG1-28,Daisuke · Week 4 repository and UML review,Done,Task,2026-10-30 00:00:00.0,2026-11-04 01:54:52.79,PG1-28
+PG1-29,Marcus · Week 4 cropping and blending experiment,To Do,Task,2026-10-31 00:00:00.0,2026-10-29 04:49:47.758,PG1-29
+PG1-30,Haruho · Week 4 runnable prototype and technical review,To Do,Task,2026-11-03 00:00:00.0,2026-10-29 04:50:00.335,PG1-30
+PG1-31,Hanz · Week 4 prototype testing and results,To Do,Task,2026-11-02 00:00:00.0,2026-10-29 04:50:15.357,PG1-31
+PG1-32,Bien · Week 4 Doxygen package and asset check,To Do,Task,2026-10-30 00:00:00.0,2026-10-29 04:50:31.948,PG1-32
+PG1-33,Sousuke · Week 4 architecture and comment review,To Do,Task,2026-11-01 00:00:00.0,2026-10-29 04:50:46.554,PG1-33
+PG1-34,Pan · Week 4 run guide and verified results,To Do,Task,2026-11-03 00:00:00.0,2026-10-29 04:50:59.233,PG1-34
+PG1-35,Monika · Week 4 documentation integration and review,To Do,Task,2026-11-04 00:00:00.0,2026-10-29 04:51:13.96,PG1-35
+PG1-36,Tarun · Week 4 workload and access follow-up,To Do,Task,2026-10-29 00:00:00.0,2026-10-29 04:51:29.679,PG1-36
+PG1-37,Sariga · Week 4 meeting decisions and blockers,To Do,Task,2026-10-29 00:00:00.0,2026-10-29 04:51:47.286,PG1-37
+PG1-38,Watts · Week 4 Jira evidence and delivery package,To Do,Task,2026-11-04 00:00:00.0,2026-10-29 04:52:01.379,PG1-38
+PG1-39,Jake · Week 4 coordination and final review,To Do,Task,2026-11-04 00:00:00.0,2026-10-29 04:52:16.664,PG1-39
+PG1-40,Week 5 | Evidence review and professor handover,To Do,Epic,2026-11-10 00:00:00.0,2026-11-05 02:24:59.379,PG1-40
+PG1-41,Jake | Week 5 department review and evidence index,To Do,Task,2026-11-07 00:00:00.0,2026-11-05 02:32:27.353,PG1-41
+PG1-42,Watts | Week 5 portable project archive and ZIP check,To Do,Task,2026-11-09 00:00:00.0,2026-11-05 02:34:31.945,PG1-42
+PG1-43,Jake | Week 5 professor walkthrough and acceptance review,To Do,Task,2026-11-10 00:00:00.0,2026-11-05 02:34:31.988,PG1-43
+PG1-44,Monika | Week 5 documentation integration and review,To Do,Task,2026-11-07 00:00:00.0,2026-11-05 02:44:02.765,PG1-44
+PG1-45,Haruho | Week 5 development integration and validation,To Do,Task,2026-11-07 00:00:00.0,2026-11-05 02:43:16.496,PG1-45
+PG1-46,Tarun | Week 5 workload and handover readiness check,To Do,Task,,2026-11-05 02:44:25.05,PG1-46
+PG1-47,Sariga | Week 5 meeting decisions and follow-up register,To Do,Task,,2026-11-05 02:44:43.908,PG1-47
+PG1-48,Monika | Week 5 generated documentation review and sign-off,To Do,Subtask,,2026-11-05 02:41:49.455,PG1-48
+PG1-49,Pan | Week 5 Main Page and comment consistency check,To Do,Subtask,,2026-11-05 02:41:51.606,PG1-49
+PG1-50,"Sousuke | Week 5 overview, design and comment-format review",To Do,Subtask,,2026-11-05 02:41:53.839,PG1-50
+PG1-51,Bien | Week 5 Doxygen configuration and offline asset check,To Do,Subtask,,2026-11-05 02:41:55.801,PG1-51
+PG1-52,Haruho | Week 5 runnable build integration and technical review,To Do,Subtask,,2026-11-05 02:42:42.941,PG1-52
+PG1-53,Daisuke | Week 5 repository and UML consistency check,To Do,Subtask,,2026-11-05 02:42:44.923,PG1-53
+PG1-54,Marcus | Week 5 cropping and blending validation evidence,To Do,Subtask,,2026-11-05 02:42:46.949,PG1-54
+PG1-55,Hanz | Week 5 regression tests and defect register,To Do,Subtask,,2026-11-05 02:42:49.002,PG1-55

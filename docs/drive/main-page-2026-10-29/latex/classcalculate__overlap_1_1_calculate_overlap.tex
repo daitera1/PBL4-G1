@@ -1,0 +1,95 @@
+\doxysection{calculate\+\_\+overlap.\+Calculate\+Overlap Class Reference}
+\hypertarget{classcalculate__overlap_1_1_calculate_overlap}{}\label{classcalculate__overlap_1_1_calculate_overlap}\index{calculate\_overlap.CalculateOverlap@{calculate\_overlap.CalculateOverlap}}
+
+
+Calculates the alpha blending mask for the overlap region.  
+
+
+Inheritance diagram for calculate\+\_\+overlap.\+Calculate\+Overlap:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcalculate__overlap_1_1_calculate_overlap}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classcalculate__overlap_1_1_calculate_overlap_ab38973f76b01ac7be113708b82ad10a2}{\+\_\+\+\_\+init\+\_\+\_}} (self)
+\begin{DoxyCompactList}\small\item\em Initialises \doxylink{classcalculate__overlap_1_1_calculate_overlap}{Calculate\+Overlap} with default None values. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classcalculate__overlap_1_1_calculate_overlap_af5f1432ff89e4a7e0cd06d5c13ba65bc}{alpha\+Gamma}} (self)
+\begin{DoxyCompactList}\small\item\em Computes the gamma-\/corrected alpha blend mask. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classcalculate__overlap_1_1_calculate_overlap_a3786209d357f42931b18f4f86fbca717}{side}} = None
+\begin{DoxyCompactList}\small\item\em Which projector side this instance handles (\textquotesingle{}left\textquotesingle{} or \textquotesingle{}right\textquotesingle{}). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classcalculate__overlap_1_1_calculate_overlap_a5082a4bbba0981a45a5450bd7d7cec57}{overlap\+Width}} = None
+\begin{DoxyCompactList}\small\item\em Width of the overlap region in pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Calculates the alpha blending mask for the overlap region. 
+
+Determines which side (left or right) the projector is on and computes the gamma-\/corrected alpha values across the overlap zone. 
+
+\label{classcalculate__overlap_1_1_calculate_overlap_doc-constructors}
+\Hypertarget{classcalculate__overlap_1_1_calculate_overlap_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcalculate__overlap_1_1_calculate_overlap_ab38973f76b01ac7be113708b82ad10a2}\index{calculate\_overlap.CalculateOverlap@{calculate\_overlap.CalculateOverlap}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!calculate\_overlap.CalculateOverlap@{calculate\_overlap.CalculateOverlap}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classcalculate__overlap_1_1_calculate_overlap_ab38973f76b01ac7be113708b82ad10a2} 
+calculate\+\_\+overlap.\+Calculate\+Overlap.\+\_\+\+\_\+init\+\_\+\_ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Initialises \doxylink{classcalculate__overlap_1_1_calculate_overlap}{Calculate\+Overlap} with default None values. 
+
+
+
+\label{classcalculate__overlap_1_1_calculate_overlap_doc-func-members}
+\Hypertarget{classcalculate__overlap_1_1_calculate_overlap_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcalculate__overlap_1_1_calculate_overlap_af5f1432ff89e4a7e0cd06d5c13ba65bc}\index{calculate\_overlap.CalculateOverlap@{calculate\_overlap.CalculateOverlap}!alphaGamma@{alphaGamma}}
+\index{alphaGamma@{alphaGamma}!calculate\_overlap.CalculateOverlap@{calculate\_overlap.CalculateOverlap}}
+\doxysubsubsection{\texorpdfstring{alphaGamma()}{alphaGamma()}}
+{\footnotesize\ttfamily \label{classcalculate__overlap_1_1_calculate_overlap_af5f1432ff89e4a7e0cd06d5c13ba65bc} 
+calculate\+\_\+overlap.\+Calculate\+Overlap.\+alpha\+Gamma (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Computes the gamma-\/corrected alpha blend mask. 
+
+Uses the formula I\textquotesingle{}(x) = (1 -\/ x)\texorpdfstring{$^\wedge$}{\string^}gamma across the overlap region to produce a smooth brightness ramp. \begin{DoxyReturn}{Returns}
+Mat The computed alpha mask. 
+\end{DoxyReturn}
+
+
+\label{classcalculate__overlap_1_1_calculate_overlap_doc-variable-members}
+\Hypertarget{classcalculate__overlap_1_1_calculate_overlap_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcalculate__overlap_1_1_calculate_overlap_a5082a4bbba0981a45a5450bd7d7cec57}\index{calculate\_overlap.CalculateOverlap@{calculate\_overlap.CalculateOverlap}!overlapWidth@{overlapWidth}}
+\index{overlapWidth@{overlapWidth}!calculate\_overlap.CalculateOverlap@{calculate\_overlap.CalculateOverlap}}
+\doxysubsubsection{\texorpdfstring{overlapWidth}{overlapWidth}}
+{\footnotesize\ttfamily \label{classcalculate__overlap_1_1_calculate_overlap_a5082a4bbba0981a45a5450bd7d7cec57} 
+calculate\+\_\+overlap.\+Calculate\+Overlap.\+overlap\+Width = None}
+
+
+
+Width of the overlap region in pixels. 
+
+\Hypertarget{classcalculate__overlap_1_1_calculate_overlap_a3786209d357f42931b18f4f86fbca717}\index{calculate\_overlap.CalculateOverlap@{calculate\_overlap.CalculateOverlap}!side@{side}}
+\index{side@{side}!calculate\_overlap.CalculateOverlap@{calculate\_overlap.CalculateOverlap}}
+\doxysubsubsection{\texorpdfstring{side}{side}}
+{\footnotesize\ttfamily \label{classcalculate__overlap_1_1_calculate_overlap_a3786209d357f42931b18f4f86fbca717} 
+calculate\+\_\+overlap.\+Calculate\+Overlap.\+side = None}
+
+
+
+Which projector side this instance handles (\textquotesingle{}left\textquotesingle{} or \textquotesingle{}right\textquotesingle{}). 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+code/\doxymbox{\hyperlink{calculate__overlap_8py}{calculate\+\_\+overlap.\+py}}\end{DoxyCompactItemize}

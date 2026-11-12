@@ -1,0 +1,88 @@
+\chapter{Alpha Blending Multi-\/\+Projector Documentation }
+\hypertarget{index}{}\label{index}\index{Alpha Blending Multi-\/Projector Documentation@{Alpha Blending Multi-\/Projector Documentation}}
+\hypertarget{index_intro_sec}{}\doxysection{\texorpdfstring{1. Introduction}{1. Introduction}}\label{index_intro_sec}
+This is the User Manual for the Multi-\/\+Projector Alpha Blending application. The program displays one image across two adjacent projectors and applies a gamma-\/corrected alpha mask to the overlapping region, so that the final projected image looks like one large, seamless picture. The application reads its settings (image path, projector distance, gamma, etc.) from a configuration file and uses Open\+CV and Num\+Py for image processing.
+
+This User Manual is divided into the following sections:
+\begin{DoxyItemize}
+\item \doxysectlink{index_req_sec}{2. System Requirements}{1}
+\item \doxysectlink{index_setup_sec}{3. Setup}{1}
+\item \doxysectlink{index_arch_sec}{4. System Architecture}{1}
+\item \doxysectlink{index_math_sec}{5. Mathematical Foundation}{1}
+\item \doxysectlink{index_vis_sec}{6. Visualization of the Blending Process}{1}
+\item \doxysectlink{index_usage_sec}{7. Usage Notes}{1}
+\item \doxylink{class_overview}{Class Overview}
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Beginners may skip the "{}\+Mathematical Foundation"{} section and start with "{}\+System Requirements"{} and "{}\+Setup"{}.
+\end{DoxyNote}
+\hypertarget{index_req_sec}{}\doxysection{\texorpdfstring{2. System Requirements}{2. System Requirements}}\label{index_req_sec}
+
+\begin{DoxyItemize}
+\item {\bfseries{Operating System}}: Windows 10 / 11 (tested)
+\item {\bfseries{Python}}: 3.\+9 or later
+\item {\bfseries{Required Python Libraries}}:
+\begin{DoxyEnumerate}
+\item numpy
+\item opencv-\/python
+\end{DoxyEnumerate}
+\item {\bfseries{Hardware}}: two projectors placed side by side with an overlapping area
+\end{DoxyItemize}\hypertarget{index_setup_sec}{}\doxysection{\texorpdfstring{3. Setup}{3. Setup}}\label{index_setup_sec}
+{\bfseries{Step 1: Install required packages}}
+
+Run the following command: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip\ install\ -\/r\ requirements.txt}
+
+\end{DoxyCode}
+
+
+{\bfseries{Step 2: Configure the settings}}
+
+Open {\ttfamily config.\+json} and adjust the values if needed:
+\begin{DoxyItemize}
+\item {\bfseries{image\+\_\+name}}: path to the image you want to project
+\item {\bfseries{side}}: {\ttfamily left} or {\ttfamily right}, the position of this projector
+\item {\bfseries{distance\+\_\+between\+\_\+projectors}}: distance between the two projectors (cm)
+\item {\bfseries{projected\+\_\+image\+\_\+width}}: width of one projector\textquotesingle{}s image (cm)
+\item {\bfseries{gamma}}: gamma value used when creating the mask
+\end{DoxyItemize}
+
+{\bfseries{Step 3: Run the program}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python\ main\_alpha\_blender.py}
+
+\end{DoxyCode}
+\hypertarget{index_arch_sec}{}\doxysection{\texorpdfstring{4. System Architecture}{4. System Architecture}}\label{index_arch_sec}
+The application consists of two main components:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Main\+Alpha\+Blender}}: the main controller class. It loads the image, calculates the overlap region and applies the alpha mask.
+\item {\bfseries{Config\+Reader}}: a helper class that reads {\ttfamily config.\+json} and provides getter methods for the projector parameters.
+\end{DoxyEnumerate}\hypertarget{index_math_sec}{}\doxysection{\texorpdfstring{5. Mathematical Foundation}{5. Mathematical Foundation}}\label{index_math_sec}
+Projectors do not have a linear luminance response, so simple linear blending produces bright or dark bands in the overlap region. Gamma correction is used to compensate for this:
+
+\[  M(x) = B(x)^{1/\gamma}
+\]
+
+where:
+\begin{DoxyItemize}
+\item $M(x)$ is the calculated mask value,
+\item $B(x)$ is the linear ramp value (0 to 1),
+\item $\gamma$ is the gamma value (typically 2.\+2 to 2.\+4).
+\end{DoxyItemize}\hypertarget{index_vis_sec}{}\doxysection{\texorpdfstring{6. Visualization of the Blending Process}{6. Visualization of the Blending Process}}\label{index_vis_sec}
+\hypertarget{index_before_sec}{}\doxysubsection{\texorpdfstring{Before Mask Application}{Before Mask Application}}\label{index_before_sec}
+The raw left and right projector inputs. Without the mask, the overlap region appears brighter than the rest of the image.
+
+ \hypertarget{index_after_sec}{}\doxysubsection{\texorpdfstring{After Mask Application}{After Mask Application}}\label{index_after_sec}
+After applying the gamma-\/corrected alpha mask, the brightness in the overlap region matches the rest of the image.
+
+\hypertarget{index_usage_sec}{}\doxysection{\texorpdfstring{7. Usage Notes}{7. Usage Notes}}\label{index_usage_sec}
+
+\begin{DoxyItemize}
+\item Make sure both projectors use the same resolution (e.\+g. 1920x1080).
+\item If a visible seam remains, adjust the {\ttfamily gamma} value in {\ttfamily config.\+json}.
+\item Press any key or close the window to exit the program. 
+\end{DoxyItemize}\input{class_overview}

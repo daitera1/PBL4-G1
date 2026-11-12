@@ -1,0 +1,51 @@
+\doxysection{Class Overview }
+\hypertarget{class_overview}{}\label{class_overview}\index{Class Overview@{Class Overview}}
+This page gives an overview of all classes in the Alpha Blender system and explains how they work together.
+
+Click a class name to open its detailed reference page.\hypertarget{class_overview_class_list_sec}{}\doxysubsection{\texorpdfstring{Class List}{Class List}}\label{class_overview_class_list_sec}
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Class  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}File  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Responsibility  \\
+\doxylink{classmain__alpha__blender_1_1_main_alpha_blender}{Main\+Alpha\+Blender}  &\doxylink{main__alpha__blender_8py}{main\+\_\+alpha\+\_\+blender.\+py}  &Entry point. Controls the whole pipeline and displays the final image.  \\
+\doxylink{classconfig__reader_1_1_config_reader}{Config\+Reader}  &\doxylink{config__reader_8py}{config\+\_\+reader.\+py}  &Reads projector and image settings (width, distance, overlap, gamma, side).  \\
+\doxylink{classimage__read__write_1_1_image_read_write}{Image\+Read\+Write}  &\doxylink{image__read__write_8py}{image\+\_\+read\+\_\+write.\+py}  &Loads the source image from disk as an Open\+CV Mat.  \\
+\doxylink{classcrop__image_1_1_crop_image}{Crop\+Image}  &\doxylink{crop__image_8py}{crop\+\_\+image.\+py}  &Splits the source image into left and right parts for each projector.  \\
+\doxylink{classcalculate__overlap_1_1_calculate_overlap}{Calculate\+Overlap}  &\doxylink{calculate__overlap_8py}{calculate\+\_\+overlap.\+py}  &Calculates the overlap width and the gamma-\/corrected alpha values.  \\
+\doxylink{classmask__creator_1_1_mask_creator}{Mask\+Creator}  &\doxylink{mask__creator_8py}{mask\+\_\+creator.\+py}  &Creates the gradient mask applied to the overlap region.  \\
+\end{DoxyTable}
+\hypertarget{class_overview_class_flow_sec}{}\doxysubsection{\texorpdfstring{Processing Flow}{Processing Flow}}\label{class_overview_class_flow_sec}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Main\+Alpha\+Blender}} starts the program and creates a {\bfseries{Config\+Reader}}.
+\item {\bfseries{Config\+Reader}} loads all projector and image parameters.
+\item {\bfseries{Image\+Read\+Write}} reads the source image.
+\item {\bfseries{Crop\+Image}} cuts the image into the left and right parts.
+\item {\bfseries{Calculate\+Overlap}} determines the overlap region for this projector side.
+\item {\bfseries{Mask\+Creator}} builds the gamma-\/based blending mask.
+\item {\bfseries{Main\+Alpha\+Blender}} applies the mask and displays the result in full screen.
+\end{DoxyEnumerate}\hypertarget{class_overview_class_detail_sec}{}\doxysubsection{\texorpdfstring{Class Details}{Class Details}}\label{class_overview_class_detail_sec}
+\hypertarget{class_overview_cd_main}{}\doxysubsubsection{\texorpdfstring{Main\+Alpha\+Blender}{Main\+Alpha\+Blender}}\label{class_overview_cd_main}
+The controller of the system. It owns the Config\+Reader instance and calls the other classes in order.
+\begin{DoxyItemize}
+\item Method: \doxylink{classmain__alpha__blender_1_1_main_alpha_blender_a7cd4dbe2e5ea86441105639a004cf542}{display()}
+\end{DoxyItemize}\hypertarget{class_overview_cd_config}{}\doxysubsubsection{\texorpdfstring{Config\+Reader}{Config\+Reader}}\label{class_overview_cd_config}
+A helper class that stores every configuration value and provides getter methods for them.
+\begin{DoxyItemize}
+\item Main methods: get\+Projected\+Image\+Width(), get\+Distance\+Between\+Projector(), get\+Image\+Width(), get\+Image\+Height(), get\+Image\+Name(), get\+Side(), get\+Gamma()
+\end{DoxyItemize}\hypertarget{class_overview_cd_image}{}\doxysubsubsection{\texorpdfstring{Image\+Read\+Write}{Image\+Read\+Write}}\label{class_overview_cd_image}
+Reads the image file given by {\ttfamily img\+\_\+filename} and keeps it in memory.
+\begin{DoxyItemize}
+\item Method: \doxylink{classimage__read__write_1_1_image_read_write_ae451d6813f7529beb013d11150e11260}{get\+Image()}
+\end{DoxyItemize}\hypertarget{class_overview_cd_crop}{}\doxysubsubsection{\texorpdfstring{Crop\+Image}{Crop\+Image}}\label{class_overview_cd_crop}
+Produces {\ttfamily img\+\_\+left} and {\ttfamily img\+\_\+right}, the two images sent to the projectors.
+\begin{DoxyItemize}
+\item Method: \doxylink{classcrop__image_1_1_crop_image_a6eb44826074d4d01a292879ae553b39a}{crop()}
+\end{DoxyItemize}\hypertarget{class_overview_cd_overlap}{}\doxysubsubsection{\texorpdfstring{Calculate\+Overlap}{Calculate\+Overlap}}\label{class_overview_cd_overlap}
+Uses the projector side and overlap width to compute the alpha ramp: \[ I\textnormal{\textquotesingle}(x) = (1 - x)^{\gamma} \]
+\begin{DoxyItemize}
+\item Method: \doxylink{classcalculate__overlap_1_1_calculate_overlap_af5f1432ff89e4a7e0cd06d5c13ba65bc}{alpha\+Gamma()}
+\end{DoxyItemize}\hypertarget{class_overview_cd_mask}{}\doxysubsubsection{\texorpdfstring{Mask\+Creator}{Mask\+Creator}}\label{class_overview_cd_mask}
+Generates the gradient mask from the gamma value and the overlap width in pixels.
+\begin{DoxyItemize}
+\item Method: \doxylink{classmask__creator_1_1_mask_creator_a0d05ae0bd196a06027e3e1cd161a14b3}{create\+Mask()} 
+\end{DoxyItemize}
