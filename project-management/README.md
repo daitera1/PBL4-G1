@@ -6,6 +6,7 @@
 
 | Record | Contents |
 | --- | --- |
+| [Weekly review](WEEKLY_REVIEW.md) | Weekly evidence, planned Gantt overview, all-member task table and dated status snapshots |
 | [Jira archive](jira/README.md) | 52 dated task records, CSV, JSON and browsable issue pages |
 | [Planning](planning/) | Gantt schedule, responsibilities and coordination plans |
 | [Team wiki](wiki/) | Project overview and Week 3 / Week 4–5 progress notes |

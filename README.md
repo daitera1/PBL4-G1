@@ -27,6 +27,7 @@ A shared home for the Python image-blending system, technical documentation, UML
 | Inspect gamma compensation | [ImageBlendingWithGamma](ImageBlendingWithGamma/) |
 | Read the team's Doxygen documentation | [Documentation index](docs/README.md) |
 | Find UML and design files | [Design documents](docs/design/) |
+| Follow weekly progress and schedules | [Weekly review and Gantt overview](project-management/WEEKLY_REVIEW.md) |
 | Review tasks, owners and deadlines | [Jira archive — 52 records](project-management/jira/README.md) |
 | Review plans, meeting records and workload | [Project management](project-management/README.md) |
 | Find images, parameters and structured data | [Data index](data/README.md) |

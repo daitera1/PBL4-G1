@@ -13,6 +13,7 @@ This repository is public: the files below can be read or downloaded without sig
 | Software and how to run it | [Run guide](docs/setup.md) · [Baseline source](ImageBlendingNoGamma/) · [Gamma-compensated source](ImageBlendingWithGamma/) |
 | Technical documentation | [Documentation index](docs/README.md) |
 | UML design | [View diagram and download Astah source](docs/design/README.md) |
+| Weekly progress and Gantt overview | [Weekly review and member task table](project-management/WEEKLY_REVIEW.md) |
 | Every person's Jira tickets | [Final ticket register](project-management/jira/README.md) |
 | Screenshots of Jira | [Screenshot gallery](project-management/jira/screenshots/README.md) |
 | Plans and schedule | [Planning and Gantt](project-management/planning/README.md) |
