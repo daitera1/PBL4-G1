@@ -32,7 +32,7 @@ Keep all folders together. On GitHub, Markdown pages and images display directly
 | UML design | [Diagram and Astah source](Documentation/design/README.md) |
 | Schedule | [Planning and Gantt guide](Management/planning/README.md) |
 | Meeting and progress records | [Project wiki](Management/wiki/Project-Wiki.md) · [Week 3](Management/wiki/Week-3-Progress.md) · [Weeks 4–5](Management/wiki/Week-4-5-Progress.md) |
-| Workload | [Workload guide](Management/workload/README.md) |
+| Tarun’s workload and coordination | [Two screenshots, summary and workbook](Management/workload/README.md) |
 | Complete final documentation files | [Final package guide](Documentation/final-deliverable-2026-11-12/README.md) |
 | Sources and checks | [File inventory](Documentation/drive-source-inventory.csv) · [Verification notes](Documentation/verification.md) |
 

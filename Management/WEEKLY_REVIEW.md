@@ -4,6 +4,8 @@
 
 [Professor start page](../PROFESSOR_START_HERE.md) · [All 52 tickets](jira/README.md) · [Jira screenshots](jira/screenshots/README.md) · [Live Jira timeline](https://ed-team-fqz0grjq.atlassian.net/jira/software/projects/PG1/boards/2/timeline?rangeMode=WEEKS)
 
+Tarun’s [Week 3 workload table and proposed redistribution screenshots](workload/README.md) are available with a readable summary and the original workbook.
+
 ## Project at a glance
 
 | People | Final tracker status | Software | Documentation |
