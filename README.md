@@ -6,17 +6,18 @@
 
 [Download the complete project ZIP](https://github.com/daitera1/PBL4-G1/archive/refs/heads/main.zip) · [Professor review guide](PROFESSOR_START_HERE.md)
 
-## Explore the three teams
+## Explore the handover
 
 | Folder | What is inside | Start with |
 | --- | --- | --- |
 | [Development](Development/) | Python code, sample images, configuration and dependencies | [Run the project](Documentation/setup.md) |
 | [Documentation](Documentation/) | Setup guide, Doxygen pages, UML and design documents | [Documentation index](Documentation/README.md) |
 | [Management](Management/) | Jira records, Gantt plans, meeting notes and workload records | [Management guide](Management/README.md) |
+| [Presentation](Presentation/) | Final Canva slides in PDF and PowerPoint | [Open the presentation](Presentation/README.md) |
 
 ## Get started
 
-1. Download the ZIP above and extract it.
+1. Download the ZIP above, extract it, and open `START_HERE.html` for offline navigation.
 2. Follow the [setup guide](Documentation/setup.md) to run the software.
 3. Use the [professor review guide](PROFESSOR_START_HERE.md) to find each deliverable.
 

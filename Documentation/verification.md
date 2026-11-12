@@ -1,6 +1,16 @@
 # Packaging verification · 12 November 2026
 
-## Passed
+## Final presentation and handover check
+
+- Added `Presentation/` alongside Development, Documentation and Management, with native Canva PDF and PowerPoint exports containing 27 slides. The empty page after the closing slide was excluded.
+- PDF opens without a password; all pages render. Reviewed the slides, screenshots and final page. PowerPoint contains 27 slides and passes archive integrity checks; use the PDF for consistent visual appearance.
+- Rechecked all 497 archived Drive files against their source SHA-256 hashes and corrected the inventory paths after the department-folder reorganization.
+- Rechecked 298 relative Markdown links and the offline `START_HERE.html` links; all resolve.
+- Rechecked the CSV/JSON register: identical 52 records, all Done, covering 12 assignees with corresponding issue pages.
+- Rechecked all 14 implementation Python files with the parser and all four Office/ZIP containers with archive integrity checks.
+- The presentation adds team-reported demonstration photos. Its `main_alpha_blender.py` revision has not been matched to the delivered `main.py` implementations. Use the current run guide for the delivered files.
+
+## Earlier collection checks
 
 - 497 Drive files copied/exported, including seven native Google Docs exported as Markdown. Three instructor resources are recorded by source link.
 - Download byte lengths matched available non-native Drive metadata. All copied/exported Drive files matched the SHA-256 hashes in the source inventory.

@@ -10,6 +10,7 @@ This repository is public: the files below can be read or downloaded without sig
 
 | What to review | Open here |
 | --- | --- |
+| Final presentation | [PDF slides](Presentation/PBL4-G1-Presentation-2026-11-12.pdf) · [PowerPoint](Presentation/PBL4-G1-Presentation-2026-11-12.pptx) · [Presentation guide](Presentation/README.md) |
 | Software and how to run it | [Run guide](Documentation/setup.md) · [Baseline source](Development/ImageBlendingNoGamma/) · [Gamma-compensated source](Development/ImageBlendingWithGamma/) |
 | Technical documentation | [Documentation index](Documentation/README.md) |
 | UML design | [View diagram and download Astah source](Documentation/design/README.md) |
@@ -25,12 +26,13 @@ This repository is public: the files below can be read or downloaded without sig
 
 **[Download the complete repository ZIP](https://github.com/daitera1/PBL4-G1/archive/refs/heads/main.zip)**
 
-Extract the ZIP before opening files. The download includes the code, sample images, documentation assets, Jira records and screenshots.
+Extract the ZIP before opening files, then double-click `START_HERE.html` for a browser-based starting page. The download includes the code, sample images, documentation assets, Jira records and screenshots.
 
 | File type | How to open |
 | --- | --- |
 | Markdown (`.md`), code, CSV, PNG/JPG | Read directly on GitHub; click images for the full-size version. |
 | Doxygen HTML | Download/extract the ZIP, then open `Documentation/drive/main-page-2026-11-05/html/index.html` in a browser. Keep its neighboring assets together. |
+| Presentation (`.pdf`, `.pptx`) | Open the PDF in any browser or PDF reader; use PowerPoint or a compatible app for the editable copy. No Canva login is needed. |
 | Word (`.docx`) | Use GitHub's **Download raw file** button, then open in Word or another compatible reader. |
 | Excel (`.xlsx`) | Download and open in Excel or another compatible spreadsheet app. |
 | Astah (`.asta`) | Open with Astah. A [PNG diagram](Documentation/design/UML-2026-10-29.png) is available without Astah. |
