@@ -38,6 +38,6 @@ Each folder has its own `config.json` and `test_picture.jpg`. Configure `p_width
 
 ## Validation boundary
 
-Repository packaging and source syntax are checked separately from hardware acceptance. This documentation does not claim a successful two-projector demonstration or measured image-quality results. The shared Drive test-results and final-files folders were empty when inspected on 12 November 2026.
+Repository packaging and source syntax are checked separately from hardware acceptance. This documentation does not claim a successful two-projector demonstration or measured image-quality results. The initial collection found empty test-results folders; the subsequently supplied final documentation and presentation include team-provided photographs.
 
 The [presentation](../Presentation/README.md) includes team-reported projector photographs and describes a `main_alpha_blender.py` demonstration revision. That revision has not been matched to the delivered `main.py` implementations. Follow the commands above for the delivered code.

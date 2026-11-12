@@ -1,5 +1,11 @@
 # Packaging verification · 12 November 2026
 
+## Professor navigation update
+
+- Added an easy-reading final-documentation overview with the team's supplied photographs, plus a five-step professor review route.
+- Added 84 formatted offline review pages for the guides, weekly records and individual Jira tickets. The original Markdown and final-deliverable source files are preserved.
+- Checked all local links and image paths in the Markdown guides, offline review pages and starting page; all resolve.
+
 ## Final documentation addition
 
 - The team-specified final Drive folder contains 232 files; 231 deliverable files were copied, excluding only macOS `.DS_Store` metadata.

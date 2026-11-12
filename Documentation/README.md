@@ -1,54 +1,31 @@
-# Technical documentation
+# Documentation — start here
 
-**Start with the [final documentation deliverable](final-deliverable-2026-11-12/README.md), supplied by the team on 12 November 2026.**
+**[Read the final documentation overview](FINAL_DOCUMENTATION.md)** — opens directly on GitHub, with explanations and photographs.
 
-Download and extract the project ZIP, then open `Documentation/final-deliverable-2026-11-12/html/index.html`. It includes the user manual, class reference, input/blended images and projector/team photographs. All 973 local HTML references resolve.
+For the complete user manual and class reference, download the project ZIP, extract it, and open **START_HERE.html → Final manual**.
 
-The [run guide](setup.md) describes the runnable implementations in Development. The final documentation includes class skeletons and its original setup text, so it should be read alongside that guide.
-
-## Final deliverable
-
-| Content | Location |
+| What you need | Open |
 | --- | --- |
-| Final user manual and technical reference | [HTML index](final-deliverable-2026-11-12/html/index.html) |
-| All 231 source deliverables | [Final package guide](final-deliverable-2026-11-12/README.md) |
-| Source folder | [Final Google Drive folder](https://drive.google.com/drive/u/0/folders/1oayezZ0Urm8O1PWGKTfS92PUmHGB7qqs) |
+| Easy-to-read overview and photos | [Final documentation overview](FINAL_DOCUMENTATION.md) |
+| Complete final deliverable | [Final package guide](final-deliverable-2026-11-12/README.md) |
+| Run the delivered software | [Setup instructions](setup.md) |
+| UML design | [Diagram and design files](design/README.md) |
+| Sources and file checks | [Source inventory](drive-source-inventory.csv) · [Verification notes](verification.md) |
 
-The earlier packages below are retained as historical snapshots.
+The **final-deliverable-2026-11-12** folder is the team's selected submission: 231 original files, including the manual, class descriptions, illustrations and projector/team photos. All 973 local HTML references resolve. Its `code/` files are documentation skeletons; runnable implementations are under [Development](../Development/README.md).
 
-## Historical package · 5 November 2026
+<details>
+<summary>Earlier drafts and supporting records</summary>
 
-| Content | Location |
-| --- | --- |
-| Generated Doxygen documentation | [Open HTML index](drive/main-page-2026-11-05/html/index.html) |
-| Main Page source | [mainpage.py](drive/main-page-2026-11-05/mainpage.py) |
-| Documentation configuration | [Doxyfile](drive/main-page-2026-11-05/Doxyfile) |
-| Documented class skeletons | [code](drive/main-page-2026-11-05/code/) |
-| LaTeX output | [latex](drive/main-page-2026-11-05/latex/) |
-| Supporting illustrations | [Package folder](drive/main-page-2026-11-05/) |
-
-To view HTML, download and extract the repository, then open `Documentation/drive/main-page-2026-11-05/html/index.html` in a browser. Keep the complete folder together so styles, images and search assets remain available. GitHub displays the source of an HTML file rather than executing it.
-
-The `code` subfolder is part of the documentation snapshot and contains class skeletons. Use the [repository's implementation folders](../README.md) to run the software. The historical run commands and some configuration names in these pages differ from the current code; follow [setup.md](setup.md) for the current implementation. The original Doxyfile uses the title “PBL Group 21”; it is preserved as received. Claims such as “Windows tested” in the source documentation have not been independently verified in this collection.
-
-**Historical source gaps:** the 5 November HTML index references `Left.jpg`, `Right.jpg` and `final.png`, which were absent from the shared Drive package. These illustrations will not display. The 29 October package also lacks five formula PNGs; the 22 October draft lacks four. See [verification notes](verification.md).
-
-## Design and team documents
-
-- [Astah class diagram and historical overview/design document](design/)
-- [Documentation team guide](drive/Team%20Guide.md)
-- [Documentation working draft](drive/Working%20Draft.md)
-- [Week 1 role checklists and resources index](drive/week-01/)
-- [Team wiki and progress notes](../Management/wiki/)
-
-## Earlier snapshots
-
+- [5 November documentation](drive/main-page-2026-11-05/)
 - [29 October documentation](drive/main-page-2026-10-29/)
-- [22 October Main Page draft](drive/main-page-2026-10-22/)
-- [Initial empty-code ZIP](drive/PBL4%20UML%20Python%20Empty%20Code%202.zip)
+- [22 October draft](drive/main-page-2026-10-22/)
+- [Initial class-skeleton ZIP](drive/PBL4%20UML%20Python%20Empty%20Code%202.zip)
+- [Team guide](drive/Team%20Guide.md) · [Working draft](drive/Working%20Draft.md)
+- [Week 1 checklists](drive/week-01/) · [Team wiki](../Management/wiki/Project-Wiki.md)
 
-These are retained for traceability. They may describe earlier plans or incomplete behavior.
+These preserve earlier work and may contain missing images or outdated instructions. They are not the final documentation package.
 
-## Sources and checks
+</details>
 
-See the [collection notes](collection-notes.md), [file-level Drive inventory](drive-source-inventory.csv), and [packaging verification](verification.md) for dates, coverage and known gaps.
+[Back to the professor guide](../PROFESSOR_START_HERE.md)

@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Packaging verification · 12 November 2026</title><style>body{font:17px/1.65 system-ui,sans-serif;color:#22303a;margin:0;background:#f4f5f7}main{max-width:1040px;margin:auto;padding:32px 28px 72px}article{background:white;padding:32px;border:1px solid #dce1e5;border-radius:12px}h1,h2,h3{line-height:1.25}h1{font-size:34px}h2{margin-top:34px}a{color:#972630;text-underline-offset:3px}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;display:block;overflow:auto}th,td{border:1px solid #dce1e5;padding:10px 14px;vertical-align:top}th{background:#f5f6f8;text-align:left}pre{padding:18px;background:#f3f5f7;overflow:auto}code{font-size:.9em}nav{margin-bottom:24px}blockquote{border-left:4px solid #a72630;margin:20px 0;padding:8px 18px;background:#faf4f4}summary{cursor:pointer;font-weight:650}</style><main><nav><a href="../../START_HERE.html">← Start here</a> · <a href="../PROFESSOR_START_HERE.html">Professor guide</a></nav><article><h1>Packaging verification · 12 November 2026</h1>
+<h2>Professor navigation update</h2>
+<ul>
+<li>Added an easy-reading final-documentation overview with the team&#39;s supplied photographs, plus a five-step professor review route.</li>
+<li>Added 84 formatted offline review pages for the guides, weekly records and individual Jira tickets. The original Markdown and final-deliverable source files are preserved.</li>
+<li>Checked all local links and image paths in the Markdown guides, offline review pages and starting page; all resolve.</li>
+</ul>
+<h2>Final documentation addition</h2>
+<ul>
+<li>The team-specified final Drive folder contains 232 files; 231 deliverable files were copied, excluding only macOS <code>.DS_Store</code> metadata.</li>
+<li>All 231 file sizes match Drive metadata. Their SHA-256 hashes and source URLs are recorded in the inventory alongside the 497 previously archived files.</li>
+<li>All 973 local references in the final HTML package resolve. Main-page images were also confirmed loaded in the browser. The source HTML uses external MathJax for equation typesetting; without internet, equations may show TeX source. The real projector photograph, left/right inputs, blended result, team/project photos and formula assets are included.</li>
+<li>The final <code>code/</code> folder still contains documentation skeletons rather than a complete application. The existing Development run guide remains applicable to the delivered implementations.</li>
+<li>Professor navigation now opens the final documentation. Historical source gaps below apply only to the earlier snapshots.</li>
+</ul>
+<h2>Final presentation and handover check</h2>
+<ul>
+<li>Added <code>Presentation/</code> alongside Development, Documentation and Management, with native Canva PDF and PowerPoint exports containing 27 slides. The empty page after the closing slide was excluded.</li>
+<li>PDF opens without a password; all pages render. Reviewed the slides, screenshots and final page. PowerPoint contains 27 slides and passes archive integrity checks; use the PDF for consistent visual appearance.</li>
+<li>Rechecked all 497 archived Drive files against their source SHA-256 hashes and corrected the inventory paths after the department-folder reorganization.</li>
+<li>Rechecked 298 relative Markdown links and the offline <code>START_HERE.html</code> links; all resolve.</li>
+<li>Rechecked the CSV/JSON register: identical 52 records, all Done, covering 12 assignees with corresponding issue pages.</li>
+<li>Rechecked all 14 implementation Python files with the parser and all four Office/ZIP containers with archive integrity checks.</li>
+<li>The presentation adds team-reported demonstration photos. Its <code>main_alpha_blender.py</code> revision has not been matched to the delivered <code>main.py</code> implementations. Use the current run guide for the delivered files.</li>
+</ul>
+<h2>Earlier collection checks</h2>
+<ul>
+<li><p>497 Drive files copied/exported, including seven native Google Docs exported as Markdown. Three instructor resources are recorded by source link.</p>
+</li>
+<li><p>Download byte lengths matched available non-native Drive metadata. All copied/exported Drive files matched the SHA-256 hashes in the source inventory.</p>
+</li>
+<li><p>Current Jira CSV and JSON have the same 52 unique PG1 records; each has a corresponding Markdown issue page. Final 12 November status totals: 52 Done, 0 In Progress, 0 To Do. All 12 assignees have no open tickets.</p>
+</li>
+<li><p>Historical 5 November and 9 November exports each retain 52 PG1 records and their own recorded statuses.</p>
+</li>
+<li><p>Python source files in both existing implementation folders parse successfully. Existing implementation files, configuration and sample inputs remain byte-identical to the GitHub base commit.</p>
+</li>
+<li><p>Added Markdown navigation links resolve within the repository.</p>
+</li>
+<li><p>HTML local-file link checks covered 1,965 references across the three documentation snapshots.</p>
+</li>
+<li><p>Original code ZIP and copied Office containers pass ZIP integrity checks.</p>
+</li>
+<li><p>Public copies of Jira data omit internal account IDs, watchers and administrative fields. Text and Office XML checks found no project email addresses, account-ID strings, or obvious credential patterns. LaTeX macro names that resemble emails were reviewed as false positives.</p>
+</li>
+<li><p>Public ZIP downloaded without credentials: HTTP 200, ZIP integrity passed and all 595 initially published files matched their local source bytes.</p>
+</li>
+<li><p>Final closeout preserves the 11 November export; task descriptions, summaries, assignees and due dates match it. <a href="../Management/jira/screenshots/README.html">Closeout screenshots</a> record the completed operation and empty open-ticket search.</p>
+</li>
+</ul>
+<h2>Source gaps preserved</h2>
+<p>The latest (5 November) HTML main page references <code>Left.jpg</code>, <code>Right.jpg</code> and <code>final.png</code>; these images were absent from the shared source folders. The 29 October package also lacks five formula PNGs (<code>form_0.png</code> through <code>form_4.png</code>). The 22 October draft lacks the three result images and four formula PNGs (<code>form_0.png</code> through <code>form_3.png</code>). There are 18 unresolved local references across all historical HTML files. The originals are preserved; no replacement test-result images were invented.</p>
+<p>Historical setup commands and configuration names in the Doxygen text differ from the current implementation. Use <a href="setup.html">the current run guide</a>. The source Doxyfile still has its original “PBL Group 21” title.</p>
+<h2>Not established by these checks</h2>
+<p>Packaging verification does not establish projector calibration, image quality, a successful classroom demo, or completion of tasks marked Done. OpenCV is not installed in the collection environment, so the GUI application was not executed. No independent hardware test results were supplied by the shared Drive results folder.</p>
+</article></main></html>
