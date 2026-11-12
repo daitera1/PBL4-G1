@@ -28,26 +28,17 @@ The Weeks 4–5 notes report combining left/right scripts, separating configurat
 
 **Planned dates from the existing Jira timeline, reviewed 12 November.** Bars show scheduling windows. Actual recorded status changes are shown separately below.
 
-```mermaid
-gantt
-    title PBL4 Group 1 — original planned schedule
-    dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Week 3
-    Development                  :w3dev, 2026-10-22, 2026-10-27
-    Documentation                :w3docs, 2026-10-22, 2026-10-28
-    Management                   :w3mgmt, 2026-10-22, 2026-10-28
-    section Week 4
-    Team tasks and review        :w4, 2026-10-29, 2026-11-04
-    section Week 5
-    Evidence review and handover :w5, 2026-11-05, 2026-11-10
-    section Presentation
-    Preparation and presentation :pres, 2026-11-05, 2026-11-12
-    section Recorded closeout
-    Final Jira closeout          :milestone, close, 2026-11-12, 0d
-```
+![Jira schedule overview, captured 12 November](jira/screenshots/gantt-overview-2026-11-12.jpg)
 
 For individual start/due dates and dependencies, open the live timeline and expand a weekly parent. Use **Weeks**, show **Assignee** and **Status**, keep **Dependencies** enabled, and leave **Hide done work items** off. Jira may store these display preferences per viewer.
+
+## Jira review views
+
+The project’s **Shortcuts → Weekly progress & evidence** opens this page. The shared **List** view shows task, owner, status, created date, updated date and due date. Expand the parent rows to inspect weekly assignments. The list layout was saved for everyone in the project on 12 November.
+
+[Full Gantt overview](jira/screenshots/gantt-overview-2026-11-12.jpg) · [Week 5 dependencies](jira/screenshots/week5-dependencies-final-2026-11-12.jpg) · [Shared task table](jira/screenshots/shared-task-table-2026-11-12.jpg)
+
+The bars retain the planned dates; the green status indicators show the final tracker state at capture time. Undated subtasks remain undated.
 
 ## Every member's weekly task register
 

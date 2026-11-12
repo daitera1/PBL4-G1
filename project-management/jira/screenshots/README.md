@@ -20,6 +20,18 @@ Jira completed the transition of 34 remaining tickets. Eighteen tickets were alr
 
 ![Bulk transition completed](closeout-operation-2026-11-12.jpg)
 
+## Schedule overview and shared table
+
+Captured **12 November 2026** during the professor review cleanup. Gantt bars retain the original planned dates; green indicators and Done labels show the tracker state at capture time, not completion on the bar end dates.
+
+![Full schedule overview](gantt-overview-2026-11-12.jpg)
+
+![Week 5 handoff dependencies after closeout](week5-dependencies-final-2026-11-12.jpg)
+
+The shared List view keeps owners, status and original audit dates visible. Expand parent rows for the tasks underneath. The footer counts top-level rows when hierarchy is enabled; the [export](../PG1-2026-11-12.csv) contains all 52 tickets.
+
+![Shared task table](shared-task-table-2026-11-12.jpg)
+
 ## Historical Week 5 dependencies
 
 The following **5 November 2026** screenshot preserves the earlier handoff/dependency planning view; it is not the final status view.
