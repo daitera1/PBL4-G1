@@ -26,7 +26,7 @@ Course slides, the original assignment form and the instructor's coding/Doxygen 
 - Earlier documentation packages and the original empty-code ZIP are historical artifacts; the implementation folders at the repository root are the software source.
 - The Drive `Final Files` and `Screenshots and Test Results` folders returned no files on 12 November 2026. Documentation illustrations are included, but no independent verified experiment dataset was found there.
 - Generated Doxygen pages describe a historical code snapshot. They are not automatically synchronized to the current implementations.
-- The initial collection did not change Jira statuses. A subsequent user-authorized [project closeout](../project-management/jira/closeout-2026-11-12.md) transitioned the remaining 34 tickets to Done and added a fresh export and screenshots. Google Drive sharing settings and source files were unchanged.
+- The initial collection did not change Jira statuses. A subsequent user-authorized [project closeout](../Management/jira/closeout-2026-11-12.md) transitioned the remaining 34 tickets to Done and added a fresh export and screenshots. Google Drive sharing settings and source files were unchanged.
 
 ## Keeping the repository current
 

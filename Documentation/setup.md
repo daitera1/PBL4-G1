@@ -1,12 +1,13 @@
 # Run the image blending system
 
-The two implementation folders are maintained side by side for comparison. Run commands from the repository root unless shown otherwise.
+The two implementation folders are maintained side by side for comparison. Start from the repository root, then enter `Development` before running the commands below.
 
 ## Environment
 
 Use Python 3 and a desktop session that supports OpenCV windows. Create a virtual environment, then install the dependencies imported by the existing source:
 
 ```bash
+cd Development
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt

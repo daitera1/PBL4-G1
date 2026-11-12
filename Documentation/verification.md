@@ -13,7 +13,7 @@
 - Public copies of Jira data omit internal account IDs, watchers and administrative fields. Text and Office XML checks found no project email addresses, account-ID strings, or obvious credential patterns. LaTeX macro names that resemble emails were reviewed as false positives.
 
 - Public ZIP downloaded without credentials: HTTP 200, ZIP integrity passed and all 595 initially published files matched their local source bytes.
-- Final closeout preserves the 11 November export; task descriptions, summaries, assignees and due dates match it. [Closeout screenshots](../project-management/jira/screenshots/README.md) record the completed operation and empty open-ticket search.
+- Final closeout preserves the 11 November export; task descriptions, summaries, assignees and due dates match it. [Closeout screenshots](../Management/jira/screenshots/README.md) record the completed operation and empty open-ticket search.
 
 ## Source gaps preserved
 

@@ -16,11 +16,11 @@ This retrospective index connects existing weekly plans, saved progress notes, d
 
 | Period | Assigned focus | Records to review |
 | --- | --- | --- |
-| Week 3 · 22–28 October | UML and interfaces; blending prototype; testing; Doxygen setup; run guide; documentation integration; workload, decisions and coordination | [12-person schedule](planning/Gantt-Schedule.md), [Week 3 record](wiki/Week-3-Progress.md), [22 October documentation snapshot](../docs/drive/main-page-2026-10-22/) |
-| Week 4 · 29 October–4 November | Repository/UML review; cropping and blending; prototype tests; documentation package; architecture/comments; team review | [Week 4 task group](jira/issues/PG1-27.md), [29 October documentation snapshot](../docs/drive/main-page-2026-10-29/), [Weeks 4–5 progress notes](wiki/Week-4-5-Progress.md) |
-| Week 5 · 5–10 November planned handover | Department reviews; evidence index; portable archive; documentation/build checks; professor walkthrough | [Week 5 task group](jira/issues/PG1-40.md), [5 November documentation snapshot](../docs/drive/main-page-2026-11-05/), [dependency screenshot](planning/Week05-Jira-Gantt-dependencies.png) |
+| Week 3 · 22–28 October | UML and interfaces; blending prototype; testing; Doxygen setup; run guide; documentation integration; workload, decisions and coordination | [12-person schedule](planning/Gantt-Schedule.md), [Week 3 record](wiki/Week-3-Progress.md), [22 October documentation snapshot](../Documentation/drive/main-page-2026-10-22/) |
+| Week 4 · 29 October–4 November | Repository/UML review; cropping and blending; prototype tests; documentation package; architecture/comments; team review | [Week 4 task group](jira/issues/PG1-27.md), [29 October documentation snapshot](../Documentation/drive/main-page-2026-10-29/), [Weeks 4–5 progress notes](wiki/Week-4-5-Progress.md) |
+| Week 5 · 5–10 November planned handover | Department reviews; evidence index; portable archive; documentation/build checks; professor walkthrough | [Week 5 task group](jira/issues/PG1-40.md), [5 November documentation snapshot](../Documentation/drive/main-page-2026-11-05/), [dependency screenshot](planning/Week05-Jira-Gantt-dependencies.png) |
 | Presentation preparation · 5–12 November | Department content; combined deck; rehearsal; final presentation milestone | [Presentation task group](jira/issues/PG1-22.md), [original preparation targets](planning/Gantt-Schedule.md#final-presentation--12-november) |
-| Final closeout · 12 November | Final GitHub handover, access checks and Jira closeout following the team's completion confirmation | [Closeout record](jira/closeout-2026-11-12.md), [final export](jira/PG1-2026-11-12.csv), [verification](../docs/verification.md) |
+| Final closeout · 12 November | Final GitHub handover, access checks and Jira closeout following the team's completion confirmation | [Closeout record](jira/closeout-2026-11-12.md), [final export](jira/PG1-2026-11-12.csv), [verification](../Documentation/verification.md) |
 
 The Weeks 4–5 notes report combining left/right scripts, separating configuration, introducing ConfigReader, organizing classes, and refining Doxygen documentation. They cover those two weeks together; they do not establish a separate completion day for every change. The Week 3 notes retain their original pending meeting details and status observations.
 
@@ -74,10 +74,10 @@ On 12 November at 11:48 JST, the remaining 34 tickets were transitioned to Done 
 
 ## Review route
 
-1. Open the [software and run guide](../docs/setup.md).
-2. Review the [UML/design](../docs/design/README.md) and [technical documentation](../docs/README.md).
+1. Open the [software and run guide](../Documentation/setup.md).
+2. Review the [UML/design](../Documentation/design/README.md) and [technical documentation](../Documentation/README.md).
 3. Use the weekly task table above to inspect each member's assignments.
 4. Compare the dated progress notes and export snapshots.
-5. Open the [screenshot gallery](jira/screenshots/README.md) and [verification notes](../docs/verification.md).
+5. Open the [screenshot gallery](jira/screenshots/README.md) and [verification notes](../Documentation/verification.md).
 
 All copied repository materials are public and downloadable without Jira or Drive access. Live Jira still requires an invitation. Source gaps, historical placeholders and the unconfirmed workload workbook remain identified in the professor guide.

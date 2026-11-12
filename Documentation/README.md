@@ -13,7 +13,7 @@ Start with the [run guide](setup.md) for the current Python implementations. The
 | LaTeX output | [latex](drive/main-page-2026-11-05/latex/) |
 | Supporting illustrations | [Package folder](drive/main-page-2026-11-05/) |
 
-To view HTML, download and extract the repository, then open `docs/drive/main-page-2026-11-05/html/index.html` in a browser. Keep the complete folder together so styles, images and search assets remain available. GitHub displays the source of an HTML file rather than executing it.
+To view HTML, download and extract the repository, then open `Documentation/drive/main-page-2026-11-05/html/index.html` in a browser. Keep the complete folder together so styles, images and search assets remain available. GitHub displays the source of an HTML file rather than executing it.
 
 The `code` subfolder is part of the documentation snapshot and contains class skeletons. Use the [repository's implementation folders](../README.md) to run the software. The historical run commands and some configuration names in these pages differ from the current code; follow [setup.md](setup.md) for the current implementation. The original Doxyfile uses the title “PBL Group 21”; it is preserved as received. Claims such as “Windows tested” in the source documentation have not been independently verified in this collection.
 
@@ -25,7 +25,7 @@ The `code` subfolder is part of the documentation snapshot and contains class sk
 - [Documentation team guide](drive/Team%20Guide.md)
 - [Documentation working draft](drive/Working%20Draft.md)
 - [Week 1 role checklists and resources index](drive/week-01/)
-- [Team wiki and progress notes](../project-management/wiki/)
+- [Team wiki and progress notes](../Management/wiki/)
 
 ## Earlier snapshots
 
