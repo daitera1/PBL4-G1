@@ -1,0 +1,97 @@
+\doxysection{mask\+\_\+creator.\+Mask\+Creator Class Reference}
+\hypertarget{classmask__creator_1_1_mask_creator}{}\label{classmask__creator_1_1_mask_creator}\index{mask\_creator.MaskCreator@{mask\_creator.MaskCreator}}
+
+
+Creates the blending mask applied to the overlap region.  
+
+
+Inheritance diagram for mask\+\_\+creator.\+Mask\+Creator:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmask__creator_1_1_mask_creator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classmask__creator_1_1_mask_creator_a605462742e1dbf9ac0ff9c8cb9aba158}{\+\_\+\+\_\+init\+\_\+\_}} (self)
+\begin{DoxyCompactList}\small\item\em Initialises \doxylink{classmask__creator_1_1_mask_creator}{Mask\+Creator} with default None values. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmask__creator_1_1_mask_creator_a0d05ae0bd196a06027e3e1cd161a14b3}{create\+Mask}} (self)
+\begin{DoxyCompactList}\small\item\em Generates and returns the blending mask. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classmask__creator_1_1_mask_creator_ad7a7115c3a21819c05a93ae78df4aa62}{gamma}} = None
+\begin{DoxyCompactList}\small\item\em Gamma value controlling the blending curve shape. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmask__creator_1_1_mask_creator_adaf755aa83f93db0d9a884c9d369f682}{overlap\+Px}} = None
+\begin{DoxyCompactList}\small\item\em Width of the overlap region in pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates the blending mask applied to the overlap region. 
+
+Generates a gradient mask based on the gamma value and overlap pixel width, used to smoothly blend the two projected images together.
+
+UML class diagram:  
+
+\label{classmask__creator_1_1_mask_creator_doc-constructors}
+\Hypertarget{classmask__creator_1_1_mask_creator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmask__creator_1_1_mask_creator_a605462742e1dbf9ac0ff9c8cb9aba158}\index{mask\_creator.MaskCreator@{mask\_creator.MaskCreator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!mask\_creator.MaskCreator@{mask\_creator.MaskCreator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classmask__creator_1_1_mask_creator_a605462742e1dbf9ac0ff9c8cb9aba158} 
+mask\+\_\+creator.\+Mask\+Creator.\+\_\+\+\_\+init\+\_\+\_ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Initialises \doxylink{classmask__creator_1_1_mask_creator}{Mask\+Creator} with default None values. 
+
+
+
+\label{classmask__creator_1_1_mask_creator_doc-func-members}
+\Hypertarget{classmask__creator_1_1_mask_creator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmask__creator_1_1_mask_creator_a0d05ae0bd196a06027e3e1cd161a14b3}\index{mask\_creator.MaskCreator@{mask\_creator.MaskCreator}!createMask@{createMask}}
+\index{createMask@{createMask}!mask\_creator.MaskCreator@{mask\_creator.MaskCreator}}
+\doxysubsubsection{\texorpdfstring{createMask()}{createMask()}}
+{\footnotesize\ttfamily \label{classmask__creator_1_1_mask_creator_a0d05ae0bd196a06027e3e1cd161a14b3} 
+mask\+\_\+creator.\+Mask\+Creator.\+create\+Mask (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Generates and returns the blending mask. 
+
+\begin{DoxyReturn}{Returns}
+Mat The blending mask as a gradient Mat object. 
+\end{DoxyReturn}
+
+
+\label{classmask__creator_1_1_mask_creator_doc-variable-members}
+\Hypertarget{classmask__creator_1_1_mask_creator_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmask__creator_1_1_mask_creator_ad7a7115c3a21819c05a93ae78df4aa62}\index{mask\_creator.MaskCreator@{mask\_creator.MaskCreator}!gamma@{gamma}}
+\index{gamma@{gamma}!mask\_creator.MaskCreator@{mask\_creator.MaskCreator}}
+\doxysubsubsection{\texorpdfstring{gamma}{gamma}}
+{\footnotesize\ttfamily \label{classmask__creator_1_1_mask_creator_ad7a7115c3a21819c05a93ae78df4aa62} 
+mask\+\_\+creator.\+Mask\+Creator.\+gamma = None}
+
+
+
+Gamma value controlling the blending curve shape. 
+
+\Hypertarget{classmask__creator_1_1_mask_creator_adaf755aa83f93db0d9a884c9d369f682}\index{mask\_creator.MaskCreator@{mask\_creator.MaskCreator}!overlapPx@{overlapPx}}
+\index{overlapPx@{overlapPx}!mask\_creator.MaskCreator@{mask\_creator.MaskCreator}}
+\doxysubsubsection{\texorpdfstring{overlapPx}{overlapPx}}
+{\footnotesize\ttfamily \label{classmask__creator_1_1_mask_creator_adaf755aa83f93db0d9a884c9d369f682} 
+mask\+\_\+creator.\+Mask\+Creator.\+overlap\+Px = None}
+
+
+
+Width of the overlap region in pixels. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+code/\doxymbox{\hyperlink{mask__creator_8py}{mask\+\_\+creator.\+py}}\end{DoxyCompactItemize}

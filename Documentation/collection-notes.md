@@ -2,11 +2,15 @@
 
 Collected on **12 November 2026** for the PBL4 Group 1 GitHub repository.
 
+## Final documentation addition
+
+The team identified [this final Drive folder](https://drive.google.com/drive/u/0/folders/1oayezZ0Urm8O1PWGKTfS92PUmHGB7qqs) as the submission deliverable after the initial collection. Its `draft 1` subfolder was copied to [final-deliverable-2026-11-12](final-deliverable-2026-11-12/README.md): 231 files, including the previously missing result illustrations and additional projector/team photographs. Only `.DS_Store` was omitted. Original bytes and relative paths are preserved.
+
 ## Sources
 
 | Source | What is preserved |
 | --- | --- |
-| Existing GitHub `main` at `03a2f33d9af5a84c4f6f8d18579cad6c205eb88b` | Both Python implementations, configuration and sample images; original paths retained |
+| Existing GitHub `main` at `03a2f33d9af5a84c4f6f8d18579cad6c205eb88b` | Both Python implementations, configuration and sample images; now organized under Development |
 | Shared project Google Drive | Dated Doxygen packages, documentation source, generated HTML/LaTeX, images, team guides, role checklists, initial code skeleton and Astah UML |
 | PG1 Jira exports dated 11 and 12 November 2026 | Preserved pre-closeout snapshot plus final 52-Done CSV/JSON and current Markdown issue pages |
 | Management collection dated 11 November 2026 | Planning Markdown, Confluence wiki exports, historical design attachment and unconfirmed workload workbook |
@@ -23,11 +27,11 @@ Course slides, the original assignment form and the instructor's coding/Doxygen 
 
 - Jira counts are a dated tracker snapshot, not proof of software acceptance.
 - The workload workbook is prefilled and remains unconfirmed.
-- Earlier documentation packages and the original empty-code ZIP are historical artifacts; the implementation folders at the repository root are the software source.
-- The Drive `Final Files` and `Screenshots and Test Results` folders returned no files on 12 November 2026. Documentation illustrations are included, but no independent verified experiment dataset was found there.
+- Earlier documentation packages and the original empty-code ZIP are historical artifacts; the implementation folders under `Development/` are the software source.
+- At the initial collection, the Drive `Final Files` and `Screenshots and Test Results` folders returned no files. The subsequently supplied final documentation folder contains photos and illustrations. Documentation illustrations are included, but no independent verified experiment dataset was found there.
 - Generated Doxygen pages describe a historical code snapshot. They are not automatically synchronized to the current implementations.
 - The initial collection did not change Jira statuses. A subsequent user-authorized [project closeout](../Management/jira/closeout-2026-11-12.md) transitioned the remaining 34 tickets to Done and added a fresh export and screenshots. Google Drive sharing settings and source files were unchanged.
 
 ## Keeping the repository current
 
-Update code in its existing implementation folder. Put new technical documents under `docs/`, dated Jira exports under `project-management/jira/`, and test evidence beside an explanation of inputs, configuration and outcomes. Keep old snapshots dated and update the relevant README and source inventory. This collection is a one-time snapshot, not an automatic Drive/Jira synchronization.
+Update code in its existing implementation folder. Put new technical documents under `Documentation/`, dated Jira exports under `Management/jira/`, and test evidence beside an explanation of inputs, configuration and outcomes. Keep old snapshots dated and update the relevant README and source inventory. This collection is a one-time snapshot, not an automatic Drive/Jira synchronization.

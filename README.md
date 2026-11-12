@@ -21,7 +21,7 @@
 2. Follow the [setup guide](Documentation/setup.md) to run the software.
 3. Use the [professor review guide](PROFESSOR_START_HERE.md) to find each deliverable.
 
-For Doxygen pages, open `Documentation/drive/main-page-2026-11-05/html/index.html` after extracting the ZIP. Keep its supporting files together.
+For Doxygen pages, open `Documentation/final-deliverable-2026-11-12/html/index.html` after extracting the ZIP. Keep its supporting files together.
 
 ## Why we used GitHub for handover
 

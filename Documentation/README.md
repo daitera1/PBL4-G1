@@ -1,8 +1,22 @@
 # Technical documentation
 
-Start with the [run guide](setup.md) for the current Python implementations. The team's Drive documentation is preserved below as dated snapshots, with its original source and generated output.
+**Start with the [final documentation deliverable](final-deliverable-2026-11-12/README.md), supplied by the team on 12 November 2026.**
 
-## Latest collected package · 5 November 2026
+Download and extract the project ZIP, then open `Documentation/final-deliverable-2026-11-12/html/index.html`. It includes the user manual, class reference, input/blended images and projector/team photographs. All 973 local HTML references resolve.
+
+The [run guide](setup.md) describes the runnable implementations in Development. The final documentation includes class skeletons and its original setup text, so it should be read alongside that guide.
+
+## Final deliverable
+
+| Content | Location |
+| --- | --- |
+| Final user manual and technical reference | [HTML index](final-deliverable-2026-11-12/html/index.html) |
+| All 231 source deliverables | [Final package guide](final-deliverable-2026-11-12/README.md) |
+| Source folder | [Final Google Drive folder](https://drive.google.com/drive/u/0/folders/1oayezZ0Urm8O1PWGKTfS92PUmHGB7qqs) |
+
+The earlier packages below are retained as historical snapshots.
+
+## Historical package · 5 November 2026
 
 | Content | Location |
 | --- | --- |
@@ -17,7 +31,7 @@ To view HTML, download and extract the repository, then open `Documentation/driv
 
 The `code` subfolder is part of the documentation snapshot and contains class skeletons. Use the [repository's implementation folders](../README.md) to run the software. The historical run commands and some configuration names in these pages differ from the current code; follow [setup.md](setup.md) for the current implementation. The original Doxyfile uses the title “PBL Group 21”; it is preserved as received. Claims such as “Windows tested” in the source documentation have not been independently verified in this collection.
 
-**Missing source assets:** the latest HTML index references `Left.jpg`, `Right.jpg` and `final.png`, which were absent from the shared Drive package. These illustrations will not display. The 29 October package also lacks five formula PNGs; the 22 October draft lacks four. See [verification notes](verification.md).
+**Historical source gaps:** the 5 November HTML index references `Left.jpg`, `Right.jpg` and `final.png`, which were absent from the shared Drive package. These illustrations will not display. The 29 October package also lacks five formula PNGs; the 22 October draft lacks four. See [verification notes](verification.md).
 
 ## Design and team documents
 

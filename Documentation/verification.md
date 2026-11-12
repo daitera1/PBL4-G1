@@ -1,5 +1,13 @@
 # Packaging verification · 12 November 2026
 
+## Final documentation addition
+
+- The team-specified final Drive folder contains 232 files; 231 deliverable files were copied, excluding only macOS `.DS_Store` metadata.
+- All 231 file sizes match Drive metadata. Their SHA-256 hashes and source URLs are recorded in the inventory alongside the 497 previously archived files.
+- All 973 local references in the final HTML package resolve. Main-page images were also confirmed loaded in the browser. The source HTML uses external MathJax for equation typesetting; without internet, equations may show TeX source. The real projector photograph, left/right inputs, blended result, team/project photos and formula assets are included.
+- The final `code/` folder still contains documentation skeletons rather than a complete application. The existing Development run guide remains applicable to the delivered implementations.
+- Professor navigation now opens the final documentation. Historical source gaps below apply only to the earlier snapshots.
+
 ## Final presentation and handover check
 
 - Added `Presentation/` alongside Development, Documentation and Management, with native Canva PDF and PowerPoint exports containing 27 slides. The empty page after the closing slide was excluded.
