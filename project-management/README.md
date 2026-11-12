@@ -1,5 +1,9 @@
 # Project management
 
+**Final closeout: 52 / 52 Jira tickets Done · 12 November 2026**
+
+[Professor guide](../PROFESSOR_START_HERE.md) · [Jira screenshots](jira/screenshots/README.md) · [Closeout record](jira/closeout-2026-11-12.md)
+
 | Record | Contents |
 | --- | --- |
 | [Jira archive](jira/README.md) | 52 dated task records, CSV, JSON and browsable issue pages |

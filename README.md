@@ -6,13 +6,17 @@
 
 **Development · Documentation · Project management**
 
-[Run the project](docs/setup.md) · [Read the documentation](docs/README.md) · [Browse Jira records](project-management/jira/README.md) · [Find the data](data/README.md)
+[Professor — start here](PROFESSOR_START_HERE.md) · [Run the project](docs/setup.md) · [Read the documentation](docs/README.md) · [Browse Jira records](project-management/jira/README.md) · [Find the data](data/README.md)
 
 </div>
 
 ---
 
 A shared home for the Python image-blending system, technical documentation, UML design, project data and team records. The implementation contains two variants for comparing blending with and without gamma compensation.
+
+**Final handover · 12 November 2026 · Jira: 52 / 52 Done**
+
+[Professor review guide](PROFESSOR_START_HERE.md) · [Jira screenshots](project-management/jira/screenshots/README.md) · [Download everything](https://github.com/daitera1/PBL4-G1/archive/refs/heads/main.zip)
 
 ## Start here
 
@@ -52,7 +56,7 @@ requirements.txt         Python dependencies used by the implementation
 
 ## Reading the evidence
 
-Collected **12 November 2026**. Jira records are a **11 November 2026 snapshot**: 18 Done, 1 In Progress and 33 To Do. Historical plans and draft documentation retain their dates; task status alone does not prove a tested deliverable. See the collection notes for source coverage and known gaps.
+Collected **12 November 2026**. The final Jira export records **52 Done, 0 In Progress and 0 To Do**, following the team’s project-completion confirmation. [Closeout record](project-management/jira/closeout-2026-11-12.md). Historical plans and draft documentation retain their dates; task status alone does not prove a tested deliverable. See the collection notes for source coverage and known gaps.
 
 To browse generated HTML offline, download the repository using **Code → Download ZIP**, extract it, and open the documentation index listed in [docs/README.md](docs/README.md). GitHub shows HTML source rather than running these pages.
 

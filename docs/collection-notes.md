@@ -8,7 +8,7 @@ Collected on **12 November 2026** for the PBL4 Group 1 GitHub repository.
 | --- | --- |
 | Existing GitHub `main` at `03a2f33d9af5a84c4f6f8d18579cad6c205eb88b` | Both Python implementations, configuration and sample images; original paths retained |
 | Shared project Google Drive | Dated Doxygen packages, documentation source, generated HTML/LaTeX, images, team guides, role checklists, initial code skeleton and Astah UML |
-| PG1 Jira export dated 11 November 2026 | 52 records in CSV/JSON and readable Markdown issue pages |
+| PG1 Jira exports dated 11 and 12 November 2026 | Preserved pre-closeout snapshot plus final 52-Done CSV/JSON and current Markdown issue pages |
 | Management collection dated 11 November 2026 | Planning Markdown, Confluence wiki exports, historical design attachment and unconfirmed workload workbook |
 
 The [Drive source inventory](drive-source-inventory.csv) maps every collected file to its source URL and modification date. SHA-256 hashes identify downloaded originals. Google Docs were exported as Markdown for reading directly on GitHub; document comments and revision histories are not part of those exports. File-level copy dates do not mean the content was newly written or approved on that date.
@@ -26,7 +26,7 @@ Course slides, the original assignment form and the instructor's coding/Doxygen 
 - Earlier documentation packages and the original empty-code ZIP are historical artifacts; the implementation folders at the repository root are the software source.
 - The Drive `Final Files` and `Screenshots and Test Results` folders returned no files on 12 November 2026. Documentation illustrations are included, but no independent verified experiment dataset was found there.
 - Generated Doxygen pages describe a historical code snapshot. They are not automatically synchronized to the current implementations.
-- No Jira statuses, Google Drive sharing settings or source files were changed by this collection.
+- The initial collection did not change Jira statuses. A subsequent user-authorized [project closeout](../project-management/jira/closeout-2026-11-12.md) transitioned the remaining 34 tickets to Done and added a fresh export and screenshots. Google Drive sharing settings and source files were unchanged.
 
 ## Keeping the repository current
 
