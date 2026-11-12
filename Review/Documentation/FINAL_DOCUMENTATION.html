@@ -1,10 +1,10 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Final documentation — easy reading guide</title><style>body{font:17px/1.65 system-ui,sans-serif;color:#22303a;margin:0;background:#f4f5f7}main{max-width:1040px;margin:auto;padding:32px 28px 72px}article{background:white;padding:32px;border:1px solid #dce1e5;border-radius:12px}h1,h2,h3{line-height:1.25}h1{font-size:34px}h2{margin-top:34px}a{color:#972630;text-underline-offset:3px}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;display:block;overflow:auto}th,td{border:1px solid #dce1e5;padding:10px 14px;vertical-align:top}th{background:#f5f6f8;text-align:left}pre{padding:18px;background:#f3f5f7;overflow:auto}code{font-size:.9em}nav{margin-bottom:24px}blockquote{border-left:4px solid #a72630;margin:20px 0;padding:8px 18px;background:#faf4f4}summary{cursor:pointer;font-weight:650}</style><main><nav><a href="../../START_HERE.html">← Start here</a> · <a href="../PROFESSOR_START_HERE.html">Professor guide</a></nav><article><h1>Final documentation — easy reading guide</h1>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Final documentation — easy reading guide</title><style>body{font:17px/1.65 system-ui,sans-serif;color:#22303a;margin:0;background:#f4f5f7}main{max-width:1040px;margin:auto;padding:32px 28px 72px}article{background:white;padding:32px;border:1px solid #dce1e5;border-radius:12px}h1,h2,h3{line-height:1.25}h1{font-size:34px}h2{margin-top:34px}a{color:#972630;text-underline-offset:3px}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;display:block;overflow:auto}th,td{border:1px solid #dce1e5;padding:10px 14px;vertical-align:top}th{background:#f5f6f8;text-align:left}pre{padding:18px;background:#f3f5f7;overflow:auto}code{font-size:.9em}nav{margin-bottom:24px}blockquote{border-left:4px solid #a72630;margin:20px 0;padding:8px 18px;background:#faf4f4}summary{cursor:pointer;font-weight:650}p,li,td{overflow-wrap:anywhere}a:focus-visible{outline:3px solid #a72630;outline-offset:3px}@media(max-width:600px){main{padding:18px 12px 40px}article{padding:18px 14px}h1{font-size:28px}th,td{padding:8px;font-size:15px}}</style><main><nav><a href="../../START_HERE.html">← Start here</a> · <a href="../PROFESSOR_START_HERE.html">Professor guide</a></nav><article><h1 id="final-documentation--easy-reading-guide">Final documentation — easy reading guide</h1>
 <p><a href="../PROFESSOR_START_HERE.html">Professor guide</a> · <a href="final-deliverable-2026-11-12/README.html">Complete final package</a> · <a href="setup.html">Run the software</a></p>
 <p>This guide explains the team&#39;s final documentation and shows its supplied images. The original manual, class reference and source files are preserved in the final package.</p>
-<h2>1. What the project does</h2>
+<h2 id="1-what-the-project-does">1. What the project does</h2>
 <p>Two projectors display parts of one wide image. Their images overlap in the middle. The software applies brightness masks in that overlap so the combined picture can appear more uniform.</p>
 <p>The team&#39;s presentation reports tests at different gamma values, including improved brightness uniformity at gamma 2.2 in the shown test. Projector position and alignment still affect the result. See <a href="../../Presentation/PBL4-G1-Presentation-2026-11-12.pdf">presentation pages 3–10</a> for the reported settings, findings and remaining checks.</p>
-<h2>2. How it works</h2>
+<h2 id="2-how-it-works">2. How it works</h2>
 <ol>
 <li>Read the projector settings and input image.</li>
 <li>Calculate the overlap and split the image for the left and right projectors.</li>
@@ -12,8 +12,8 @@
 <li>Display the two outputs and adjust the physical projector alignment.</li>
 </ol>
 <p>The manual describes the gamma adjustment as <strong>M(x) = B(x)^(1/gamma)</strong>, where B(x) is a brightness ramp from 0 to 1 and M(x) is the resulting mask.</p>
-<h2>3. Images supplied with the final manual</h2>
-<h3>Left and right inputs</h3>
+<h2 id="3-images-supplied-with-the-final-manual">3. Images supplied with the final manual</h2>
+<h3 id="left-and-right-inputs">Left and right inputs</h3>
 <table>
 <thead>
 <tr>
@@ -26,14 +26,14 @@
 <td><img src="../../Documentation/final-deliverable-2026-11-12/Right.jpg" alt="Right projector input"></td>
 </tr>
 </tbody></table>
-<h3>Blended-result illustration</h3>
+<h3 id="blended-result-illustration">Blended-result illustration</h3>
 <p><img src="../../Documentation/final-deliverable-2026-11-12/final.png" alt="Blended-result illustration supplied by the team"></p>
-<h3>Projector photograph</h3>
+<h3 id="projector-photograph">Projector photograph</h3>
 <p><img src="../../Documentation/final-deliverable-2026-11-12/real.JPG" alt="Real projection photograph supplied by the team"></p>
-<h3>Team photograph</h3>
+<h3 id="team-photograph">Team photograph</h3>
 <p><img src="../../Documentation/final-deliverable-2026-11-12/team.jpg" alt="Team photograph supplied with the final documentation"></p>
 <p>These are the team&#39;s supplied illustrations and photographs. They are not independent measurements of image quality.</p>
-<h2>4. Software structure described in the manual</h2>
+<h2 id="4-software-structure-described-in-the-manual">4. Software structure described in the manual</h2>
 <table>
 <thead>
 <tr>
@@ -67,14 +67,14 @@
 </tr>
 </tbody></table>
 <p>The final documentation contains class skeletons with placeholder methods. The runnable software remains in <a href="../Development/README.html">Development</a>; use its <a href="setup.html">setup guide</a> for commands and configuration.</p>
-<h2>5. Open the complete manual</h2>
+<h2 id="5-open-the-complete-manual">5. Open the complete manual</h2>
 <ol>
 <li><a href="https://github.com/daitera1/PBL4-G1/archive/refs/heads/main.zip">Download the full project ZIP</a> and extract it.</li>
 <li>Double-click <strong>START_HERE.html</strong>.</li>
 <li>Select <strong>Final manual</strong> to open the full user manual, class pages and navigation.</li>
 </ol>
 <p>The manual file is <code>Documentation/final-deliverable-2026-11-12/html/index.html</code>. Keep its neighbouring files together. No Drive account is needed. The manual&#39;s text, pictures and navigation are local; equation typesetting uses an external MathJax service.</p>
-<h2>6. What is included</h2>
+<h2 id="6-what-is-included">6. What is included</h2>
 <p>The final package contains <strong>231 original deliverable files</strong>: generated HTML, Doxygen configuration, documentation source, class skeletons, LaTeX files and image assets. Every copied file&#39;s size was checked against Drive metadata, and all <strong>973 local HTML references</strong> resolve.</p>
 <p><a href="final-deliverable-2026-11-12/README.html">Final package contents and source</a> · <a href="../../Documentation/drive-source-inventory.csv">File inventory</a> · <a href="verification.html">Full verification notes</a></p>
 </article></main></html>

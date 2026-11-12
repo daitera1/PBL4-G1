@@ -1,0 +1,14 @@
+# Management/jira — readable guide
+
+**On GitHub, use the readable pages linked below.**
+
+These `.html` files are formatted copies for the downloaded ZIP. To use them, extract the whole ZIP and open **START_HERE.html**. GitHub displays HTML source code; the links below open the readable Markdown versions.
+
+| Readable page | Open |
+| --- | --- |
+| Jira · final project register | [Read on GitHub](../../../Management/jira/README.md) |
+| Project closeout · 12 November 2026 | [Read on GitHub](../../../Management/jira/closeout-2026-11-12.md) |
+| issues | [Open folder guide](issues/README.md) |
+| screenshots | [Open folder guide](screenshots/README.md) |
+
+[Back to the professor guide](../../../PROFESSOR_START_HERE.md)

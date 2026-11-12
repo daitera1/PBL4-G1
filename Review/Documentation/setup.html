@@ -1,27 +1,51 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Run the image blending system</title><style>body{font:17px/1.65 system-ui,sans-serif;color:#22303a;margin:0;background:#f4f5f7}main{max-width:1040px;margin:auto;padding:32px 28px 72px}article{background:white;padding:32px;border:1px solid #dce1e5;border-radius:12px}h1,h2,h3{line-height:1.25}h1{font-size:34px}h2{margin-top:34px}a{color:#972630;text-underline-offset:3px}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;display:block;overflow:auto}th,td{border:1px solid #dce1e5;padding:10px 14px;vertical-align:top}th{background:#f5f6f8;text-align:left}pre{padding:18px;background:#f3f5f7;overflow:auto}code{font-size:.9em}nav{margin-bottom:24px}blockquote{border-left:4px solid #a72630;margin:20px 0;padding:8px 18px;background:#faf4f4}summary{cursor:pointer;font-weight:650}</style><main><nav><a href="../../START_HERE.html">← Start here</a> · <a href="../PROFESSOR_START_HERE.html">Professor guide</a></nav><article><h1>Run the image blending system</h1>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Run the image blending system</title><style>body{font:17px/1.65 system-ui,sans-serif;color:#22303a;margin:0;background:#f4f5f7}main{max-width:1040px;margin:auto;padding:32px 28px 72px}article{background:white;padding:32px;border:1px solid #dce1e5;border-radius:12px}h1,h2,h3{line-height:1.25}h1{font-size:34px}h2{margin-top:34px}a{color:#972630;text-underline-offset:3px}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;display:block;overflow:auto}th,td{border:1px solid #dce1e5;padding:10px 14px;vertical-align:top}th{background:#f5f6f8;text-align:left}pre{padding:18px;background:#f3f5f7;overflow:auto}code{font-size:.9em}nav{margin-bottom:24px}blockquote{border-left:4px solid #a72630;margin:20px 0;padding:8px 18px;background:#faf4f4}summary{cursor:pointer;font-weight:650}p,li,td{overflow-wrap:anywhere}a:focus-visible{outline:3px solid #a72630;outline-offset:3px}@media(max-width:600px){main{padding:18px 12px 40px}article{padding:18px 14px}h1{font-size:28px}th,td{padding:8px;font-size:15px}}</style><main><nav><a href="../../START_HERE.html">← Start here</a> · <a href="../PROFESSOR_START_HERE.html">Professor guide</a></nav><article><h1 id="run-the-image-blending-system">Run the image blending system</h1>
 <p>The two implementation folders are maintained side by side for comparison. Start from the repository root, then enter <code>Development</code> before running the commands below.</p>
-<h2>Environment</h2>
-<p>Use Python 3 and a desktop session that supports OpenCV windows. Create a virtual environment, then install the dependencies imported by the existing source:</p>
+<h2 id="1-prepare-the-environment">1. Prepare the environment</h2>
+<p>Extract the full ZIP. Open a terminal <strong>in the extracted project folder</strong> — the folder containing <code>Development</code>, <code>Documentation</code>, <code>Management</code> and <code>Presentation</code>.</p>
+<p>Use Python 3 and a desktop that supports OpenCV windows. Create the environment:</p>
 <pre><code class="language-bash">cd Development
 python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
 </code></pre>
-<p>On Windows, activate with <code>.venv\Scripts\activate</code> instead. Dependencies are not pinned because the team has not supplied a validated version lock.</p>
-<h2>With gamma compensation</h2>
+<p>Activate it using the command for your system:</p>
+<table>
+<thead>
+<tr>
+<th>System / terminal</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>macOS or Linux</td>
+<td><code>source .venv/bin/activate</code></td>
+</tr>
+<tr>
+<td>Windows Command Prompt</td>
+<td><code>.venv\Scripts\activate.bat</code></td>
+</tr>
+<tr>
+<td>Windows PowerShell</td>
+<td><code>.\.venv\Scripts\Activate.ps1</code></td>
+</tr>
+</tbody></table>
+<p>If Windows uses <code>python</code> rather than <code>python3</code>, use <code>python -m venv .venv</code> in the creation step. Then install the packages while still in <code>Development</code>:</p>
+<pre><code class="language-bash">python -m pip install -r requirements.txt
+</code></pre>
+<h2 id="2-choose-one-version">2. Choose one version</h2>
+<p>Both examples below start from the <strong>Development folder</strong> with the environment activated. Choose one example; do not run the blocks consecutively from different folders.</p>
+<h3 id="version-a--with-gamma-correction">Version A — with gamma correction</h3>
 <pre><code class="language-bash">cd ImageBlendingWithGamma
 python main.py left
-# For the other projector, run in a separate terminal/display session:
-python main.py right
 </code></pre>
-<h2>Without gamma compensation</h2>
+<p>For the right projector, use <code>python main.py right</code> from this same folder. To switch to the baseline version, first run <code>cd ..</code> to return to <code>Development</code>.</p>
+<h3 id="version-b--baseline-without-gamma-correction">Version B — baseline, without gamma correction</h3>
 <pre><code class="language-bash">cd ImageBlendingNoGamma
 python main.py left
-python main.py right
 </code></pre>
-<p>Each invocation opens a full-screen feed and waits for a keypress before closing. The second command can be run after the first exits, or in a separate terminal for a second display session. Physical projector/display assignment must be configured for the classroom equipment.</p>
+<p>For the right projector, use <code>python main.py right</code> from this same folder. To switch to the gamma version, first run <code>cd ..</code> to return to <code>Development</code>.</p>
+<h2 id="3-display-and-configuration">3. Display and configuration</h2>
+<p>Each invocation opens a full-screen feed and waits for a keypress before closing. Run the right-projector command after the left exits, or in a second terminal with the same environment activated and the same working folder. Physical projector/display assignment must be configured for the classroom equipment.</p>
 <p>Each folder has its own <code>config.json</code> and <code>test_picture.jpg</code>. Configure <code>p_width</code>, <code>p_height</code>, <code>p_overlap</code>, <code>gamma</code>, <code>image_name</code> and <code>side</code> there. The command-line side overrides the JSON default. Run from the chosen implementation folder so relative image paths resolve correctly.</p>
-<h2>Validation boundary</h2>
-<p>Repository packaging and source syntax are checked separately from hardware acceptance. This documentation does not claim a successful two-projector demonstration or measured image-quality results. The initial collection found empty test-results folders; the subsequently supplied final documentation and presentation include team-provided photographs.</p>
+<h2 id="what-has-been-checked">What has been checked</h2>
+<p>Files and Python syntax have been checked. Package versions are not pinned because the team has not supplied a validated dependency lock. These checks are separate from hardware acceptance. This documentation does not claim a successful two-projector demonstration or measured image-quality results. The initial collection found empty test-results folders; the subsequently supplied final documentation and presentation include team-provided photographs.</p>
 <p>The <a href="../Presentation/README.html">presentation</a> includes team-reported projector photographs and describes a <code>main_alpha_blender.py</code> demonstration revision. That revision has not been matched to the delivered <code>main.py</code> implementations. Follow the commands above for the delivered code.</p>
 </article></main></html>

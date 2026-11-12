@@ -1,10 +1,33 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Development</title><style>body{font:17px/1.65 system-ui,sans-serif;color:#22303a;margin:0;background:#f4f5f7}main{max-width:1040px;margin:auto;padding:32px 28px 72px}article{background:white;padding:32px;border:1px solid #dce1e5;border-radius:12px}h1,h2,h3{line-height:1.25}h1{font-size:34px}h2{margin-top:34px}a{color:#972630;text-underline-offset:3px}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;display:block;overflow:auto}th,td{border:1px solid #dce1e5;padding:10px 14px;vertical-align:top}th{background:#f5f6f8;text-align:left}pre{padding:18px;background:#f3f5f7;overflow:auto}code{font-size:.9em}nav{margin-bottom:24px}blockquote{border-left:4px solid #a72630;margin:20px 0;padding:8px 18px;background:#faf4f4}summary{cursor:pointer;font-weight:650}</style><main><nav><a href="../../START_HERE.html">← Start here</a> · <a href="../PROFESSOR_START_HERE.html">Professor guide</a></nav><article><h1>Development</h1>
-<p><a href="../README.html">Start here</a> · <a href="../Documentation/setup.html">Setup and run guide</a></p>
-<ul>
-<li><a href="../../Development/ImageBlendingNoGamma">Without gamma compensation</a>: baseline Python implementation.</li>
-<li><a href="../../Development/ImageBlendingWithGamma">With gamma compensation</a>: gamma-compensated implementation.</li>
-<li><a href="data/README.html">Data index</a>: sample inputs and configuration.</li>
-<li><a href="../../Development/requirements.txt">Dependencies</a>: Python packages imported by the code.</li>
-</ul>
-<p>Follow the setup guide and run each implementation from its own folder so relative image paths resolve correctly. The folder organization does not change the source code or demonstrate hardware acceptance.</p>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Development — code and how to run it</title><style>body{font:17px/1.65 system-ui,sans-serif;color:#22303a;margin:0;background:#f4f5f7}main{max-width:1040px;margin:auto;padding:32px 28px 72px}article{background:white;padding:32px;border:1px solid #dce1e5;border-radius:12px}h1,h2,h3{line-height:1.25}h1{font-size:34px}h2{margin-top:34px}a{color:#972630;text-underline-offset:3px}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;display:block;overflow:auto}th,td{border:1px solid #dce1e5;padding:10px 14px;vertical-align:top}th{background:#f5f6f8;text-align:left}pre{padding:18px;background:#f3f5f7;overflow:auto}code{font-size:.9em}nav{margin-bottom:24px}blockquote{border-left:4px solid #a72630;margin:20px 0;padding:8px 18px;background:#faf4f4}summary{cursor:pointer;font-weight:650}p,li,td{overflow-wrap:anywhere}a:focus-visible{outline:3px solid #a72630;outline-offset:3px}@media(max-width:600px){main{padding:18px 12px 40px}article{padding:18px 14px}h1{font-size:28px}th,td{padding:8px;font-size:15px}}</style><main><nav><a href="../../START_HERE.html">← Start here</a> · <a href="../PROFESSOR_START_HERE.html">Professor guide</a></nav><article><h1 id="development--code-and-how-to-run-it">Development — code and how to run it</h1>
+<p><a href="../PROFESSOR_START_HERE.html">Professor guide</a> · <a href="../Documentation/setup.html">Step-by-step setup</a></p>
+<p>This folder contains two versions of the image-blending program. Both use Python to prepare images for two projectors.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>What it does</th>
+<th>Open the code</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>With gamma correction</td>
+<td>Adjusts brightness in the area where the two projected images overlap</td>
+<td><a href="../../Development/ImageBlendingWithGamma">ImageBlendingWithGamma</a></td>
+</tr>
+<tr>
+<td>Baseline, without gamma correction</td>
+<td>Provides a version to compare against</td>
+<td><a href="../../Development/ImageBlendingNoGamma">ImageBlendingNoGamma</a></td>
+</tr>
+</tbody></table>
+<h2 id="to-review-the-work">To review the work</h2>
+<ol>
+<li>Read the <a href="../Documentation/setup.html">setup and run guide</a>.</li>
+<li>Open either version&#39;s folder to inspect its Python files and <code>config.json</code> settings.</li>
+<li>Use the <a href="data/README.html">sample images and data guide</a> to find inputs and settings.</li>
+<li>See the <a href="../Presentation/README.html">presentation</a> for the team&#39;s reported experiments and photographs.</li>
+</ol>
+<h2 id="to-run-the-program">To run the program</h2>
+<p>Install the <a href="../../Development/requirements.txt">required packages</a>, then follow <strong>one</strong> version in the <a href="../Documentation/setup.html">setup guide</a>. Run commands from the stated folder so the program can find its settings and sample image.</p>
+<p>The delivered programs start with <code>main.py</code>. The final documentation&#39;s <code>code/</code> directory contains class skeletons, not a separate runnable application. Packaging checks confirm file integrity and Python syntax; hardware testing is recorded separately.</p>
 </article></main></html>
